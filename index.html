@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <!-- 忽略页面中的数字识别为电话，忽略email识别 -->
+    <meta name="format-detection" content="telephone=no, email=no">
+    <title>zhihudaily-vue</title>
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+      .v-cloak--block, .v-cloak--inline, .v-cloak--inlineBlock {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <app></app>
+    <!-- built files will be auto injected -->
+  </body>
+  <script>
+    if ('addEventListener' in document) {
+      document.addEventListener('DOMContentLoaded', function () {
+        FastClick.attach(document.body)
+      }, false)
+    }
+  </script>
+</html>
