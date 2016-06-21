@@ -7,7 +7,10 @@ import VueRouter from 'vue-router'
 Vue.use(VueResource)
 Vue.use(VueRouter)
 
-import App from './App'
+import list from './view/App'
+import demo from './view/demo.vue'
+import Swiper from 'swiper'
+window.Swiper = Swiper
 
 /* eslint-disable no-new */
 var Foo = Vue.extend({
@@ -16,6 +19,7 @@ var Foo = Vue.extend({
 var Bar = Vue.extend({
   template: '<p>This is bar!</p>'
 })
+let App = Vue.extend({})
 // 路由器需要一个根组件。
 // 出于演示的目的，这里使用一个空的组件，直接使用 HTML 作为应用的模板
 // var Apptest = Vue.extend({})
@@ -27,16 +31,19 @@ var router = new VueRouter()
 // 创建的组件构造函数，也可以是一个组件选项对象。
 // 稍后我们会讲解嵌套路由
 router.map({
-  '/index': {
-    component: App
+  '/': {
+    component: list
   },
   '/foo': {
     component: Foo
   },
   '/bar': {
     component: Bar
+  },
+  '/demo': {
+    component: demo
   }
 })
 // 现在我们可以启动应用了！
 // 路由器会创建一个 App 实例，并且挂载到选择符 #app 匹配的元素上。
-router.start(App, 'app')
+router.start(App, '#app')
