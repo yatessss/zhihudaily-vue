@@ -1,5 +1,5 @@
 <template>
-
+  <div class="detail-content" v-html="auv | replaceUrl"></div>
 </template>
 
 <script>

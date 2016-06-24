@@ -3,44 +3,119 @@
     <div class="header">
       这里是header
     </div>
-    <div class="slider">
-      这里是轮播
-    </div>
-    <div class="list" v-html="auv">
-    </div>
+    <!--轮播组件-->
+    <slider :top_stories="topStories" v-cloak></slider>
+
+    <list-body v-for="item in allStories" :list-info="item"></list-body>
+
     <a v-link="{ path: 'foo'}">This is foo!</a><br/>
     <a v-link="{ path: 'bar'}">This is bar!</a> <br/>
     <a v-link="{ path: 'demo'}">This is demo!</a>
   </div>
 </template>
 
-<script>
-import Hello from './Hello'
+<script type="text/ecmascript-6">
+import ajax from '../ajax'
+import slider from '../components/slider.vue'
+import listBody from '../components/list-body.vue'
+
 /*eslint-disable no-useless-escape*/
+/*eslint-disable no-new*/
 export default {
+  components: {
+    slider,
+    listBody
+  },
   data () {
     return {
-      auv: '<div class=\"main-wrap content-wrap\">\n<div class=\"headline\">\n\n<div class=\"img-place-holder\"></div>\n\n\n\n</div>\n\n<div class=\"content-inner\">\n\n\n\n\n<div class=\"question\">\n<h2 class=\"question-title\"></h2>\n\n<div class=\"answer\">\n\n<div class=\"content\">\n<p style=\"text-align: center;\">* * *</p>\r\n<p style=\"text-align: center;\"><em>「筑得起人应该接受都有日倒下</em></p>\r\n<p style=\"text-align: center;\"><em>其实没有一种安稳快乐永远也不差」</em></p>\r\n<p style=\"text-align: center;\">* * *</p>\n</div>\n</div>\n\n\n</div>\n\n\n\n\n\n<div class=\"question\">\n<h2 class=\"question-title\"></h2>\n\n<div class=\"answer\">\n\n<div class=\"meta\">\n<img class=\"avatar\" src=\"http://pic1.zhimg.com/da8e974dc_is.jpg\">\n<span class=\"author\">匿名用户</span>\n</div>\n\n<div class=\"content\">\n<p>我出生在一个小县城。爷爷这辈是县里的领导，在小县城也勉强算是名门。不知道可敬还是可惜，我爷爷为官清廉，患病去世之后，没留下分文遗产，也没有给任何子女开后门。那时候我爸已经到了西南某个省会谋求机会，我当时大概四岁左右。接下来是长达七八年艰苦的岁月。那个时候几乎一周吃不上一回肉，很多时候一顿饭就是一个馒头加点泡菜。我现在身高勉强 170 出头，想来多半也是因为那些年营养跟不上的原因。基本上那时候应该属于省会城市里最底层收入的人群。这种情况一直持续到我初中。那几年国家的经济因为地产业飞速发展，我爸的工作开始有了些起色，开了个不大不小的公司。我的成绩也很好，很轻易地考上了全市最好的几所高中之一。</p>\r\n<p>本来以为应该可以比较安稳的生活了。可是高中因为父母管教太严，自己的心态也有些变化，加之家里发生了一些事，导致我高中完全没有学习的兴趣，最后勉强只上了二本分数线。父母因为从穷困到富裕，所以很在乎面子，完全不能接受我只能勉强读个二本，甚至三本，于是强行要求我出国。英语差到没底的我根本没有出国的打算，但是因为父母的期盼，还有自己幡然醒悟之后的一点野心，认真学了几个月的英语，因为自己比较聪明，提升也还蛮大，最后到了一个排名中上，中国人很少的美国大学，也交了一个很好的女朋友。</p>\r\n<p>以为终于可以很平顺的继续下去了。可惜有些时候总会遇到人生给你开的玩笑。就在我看起来很幸福的时候，我爸的公司出问题了。因为 08 年金融危机，很多产业产能过剩。我爸恰好接了一单某个现在已经倒闭的工厂的工程，然后几千万工程款收不到，欠了一大堆材料和人工费。接下来是在某地修路，该县政府出现了一些状况，又有近千万工程款收不回来。屋漏偏逢连夜雨，在资金运转已经相当紧张的时候，银行开始抽贷，终于公司破产。几乎把能卖的东西都卖了，还欠了亲戚朋友一屁股债。我爸给我打电话说家里破产，可能负担不起我学费的时候，我回想起小时候穷困潦倒时的记忆，感觉要崩溃了。真心感谢我的顾问老师，我当时的成绩申请全额奖学金有点勉强，但是他帮我推荐了一下，最后除了拿了一份普通奖学金还很幸运地当了助教。从和几个朋友合租的别墅搬到了和美国人合租的公寓，然后自己剩余时间再打点黑工加上父母寄的剩余的钱，勉强也够我接下来几个学期的开销。</p>\r\n<p>我以为可以这样坚持到毕业的时候，又特么出问题了。女朋友大概因为我忙着打工学习忽略了她，然后提出了分手。我颓废了整整一周。我爸情绪很差，破产后不到一年的时间里突然大病一场。亲戚朋友的钱早就在破产的时候借过一遍了，我妈实在没办法了打电话给我。我没有选择，卖掉了车，把积蓄全部拿了出来，又向一个好朋友借了 5000 美元，凑了 15000 美元，寄了回去。当时我身上的现金加银行的存款不到三百刀，甚至连回国的机票都凑不出来。但是因为我学分修得还比较快，只剩下一学期就能毕业，这时候放弃我真的不甘心。我决定继续留下来熬过最后一学期。</p>\r\n<p>因为最后一学期修了七门课，几乎没有时间打工。我把能卖到东西都卖了，电脑卖了，多余的衣服我摆到公寓的走廊，让他们随便留点钱就可以拿走，甚至连德仪的计算器我也卖了。这些钱加起来只够了一个月的房租加饭钱。我每天只吃两顿，基本就是白米饭或者白粥加白灼生菜再加点酱油老干妈什么的。肉全靠买点快过期的猪肉糜提前炒好冻冰箱。就这样我在第二个月已经不够钱交房租了。我很不要脸的欠房租又多住了一个半月，最后被美国室友和房东赶了出去。这个时候已经是 11 月中旬了，还有大概 20 天的样子就期末考试了。我不好意思麻烦朋友，拖着行李，周中睡图书馆，周末睡商场的厕所，睡麦当劳，又熬过两周。最后还是被一个朋友知道了，帮我交了一份房租，和他合住到期末考完。然后他又借钱给我买了回国的机票。</p>\r\n<p>回国之后到现在终于再没有什么波折了，和路人（现在是我大哥）闲聊历史文学居然很幸运的得到一个实习的机会，然后留了下来。干了两年又回到国内，目前也算是生活安稳，事业勉强小成。父母也从破产的阴影中走了出来，凑了笔钱开了家很小的饭店，算是重新创业，欠亲戚朋友的债也在慢慢地还。</p>\r\n<p>絮絮叨叨写了一大堆，我几乎从没向外人谈过这些连三流电视剧也不敢编的故事，甚至连父母对我美国几年的经历也知之不详。这个算是写给一个身处逆境的朋友看。生活中真的没有过不去的坎，好几次当时我真的感觉很无力很绝望很想放弃甚至想过干脆一死了之，现在回想起来已经没有那些负面情绪，只剩下一些云淡风清。真的不要轻言放弃，也许再坚持一下就可以得见花开。也送给诸君共勉吧。</p>\r\n<p>于乙未年七月深夜</p>\n</div>\n</div>\n\n\n<div class=\"view-more\"><a href=\"http://www.zhihu.com/question/30168227\">查看知乎讨论<span class=\"js-question-holder\"></span></a></div>\n\n</div>\n\n\n</div>\n</div>'
+      auv: '<div class=\"main-wrap content-wrap\">\n<div class=\"headline\">\n\n<div class=\"img-place-holder\"></div>\n\n\n\n</div>\n\n<div class=\"content-inner\">\n\n\n\n\n<div class=\"question\">\n<h2 class=\"question-title\">肩宽的女生该如何穿衣服修饰？</h2>\n\n<div class=\"answer\">\n\n<div class=\"meta\">\n<img class=\"avatar\" src=\"http://pic3.zhimg.com/1dc4b5dd6_is.jpg\">\n<span class=\"author\">葛巾，</span><span class=\"bio\">一摘使瓜好，再摘令瓜稀。 三摘尚自可，摘绝抱蔓归。</span>\n</div>\n\n<div class=\"content\">\n<p>实在不明白为什么很多答案都说肩宽的妹子不能穿一字领或露肩装&hellip;&hellip;</p>\r\n<p>而且晒出的那些照片，真心不够宽好么？</p>\r\n<p>论肩宽怎么穿衣，看摩纳哥王妃夏琳就好了，她之前是南非的奥运游泳队员，肩宽到什么程度？一般人真没法跟她比。</p>\r\n<p><img class=\"content-image\" src=\"http://pic3.zhimg.com/70/4bbee6e269f6a7a2eeb80ee88122682a_b.jpg\" alt=\"\" /></p>\r\n<p>婚前婚后当然请了王室级别的服装顾问，被好评的几件衣服恰恰都是露肩的或一字领的。</p>\r\n<p><img class=\"content-image\" src=\"http://pic4.zhimg.com/70/4aa2fb5d182e88b14a0925ede23b4783_b.jpg\" alt=\"\" /></p>\r\n<p>阿玛尼的婚纱，一字领</p>\r\n<p>被时尚杂志评为当年最佳着装的紫色礼服，露肩</p>\r\n<p><img class=\"content-image\" src=\"http://pic3.zhimg.com/70/3feb152a91de2195e99423079f182dc6_b.jpg\" alt=\"\" /></p>\r\n<p>船领也没啥问题</p>\r\n<p><img class=\"content-image\" src=\"http://pic2.zhimg.com/70/d3ade29598ca26e42acef24a050264f5_b.jpg\" alt=\"\" /></p>\r\n<p>大 V 领 ，配夸张颈饰，就没有问题</p>\r\n<p><img class=\"content-image\" src=\"http://pic1.zhimg.com/70/4395dcf1b5fa44865f1ae3fa2d0972d0_b.jpg\" alt=\"\" /></p>\r\n<p>西装领也没有问题，只要有内衬对比，而且不要扣紧。</p>\r\n<p><img class=\"content-image\" src=\"http://pic1.zhimg.com/70/4c49937df6abef911d0eea3d0f45e1e8_b.jpg\" alt=\"\" /></p>\r\n<p>当然她也不是总能穿对，同样露肩，这张就很惨。</p>\r\n<p><img class=\"content-image\" src=\"http://pic2.zhimg.com/70/97a12f31ab58921d95ba72d9949861e1_b.jpg\" alt=\"\" /></p>\r\n<p>为什么？那时候她还比较丰满，也没有腰，就算有锁骨，也显得肉呼呼。<strong>所以穿露肩时，先减肥，让身体线条清晰起来，形成漂亮的倒三角，肩宽就不会是什么问题。</strong></p>\r\n<p><img class=\"content-image\" src=\"http://pic3.zhimg.com/70/a755063566a539b4faf2c5261c3a63aa_b.jpg\" alt=\"\" /></p>\r\n<p>这张西装相对失败，因为厚垫肩增加了肩宽。而且高驳头，收腰的设计，不单让视线往宽肩膀的部分上移，也显得和腰部臃肿。对比上面那张西装图就知道，<strong>肩宽姑娘穿西装时，不要扣紧外套扣子，要散开，同时，领口位置要低。<br /><img class=\"content-image\" src=\"http://pic4.zhimg.com/70/cf78a2ee0dc8041c62a85c5caef6502b_b.jpg\" alt=\"\" /><br /></strong>宽肩真的不一定要遮，要遮就不要横遮，且肩膀设计要简单 ，上图这样就是活生生把搞成扑克牌。</p>\r\n<p>而简单的竖遮（有垂坠感），效果就要好很多。</p>\r\n<p><img class=\"content-image\" src=\"http://pic3.zhimg.com/70/8583e21e1abe5af633a9cf7f2cdefcbe_b.jpg\" alt=\"\" /></p>\r\n<p>下面这张，肩膀装饰太多，也挺灾难。</p>\r\n<p><img class=\"content-image\" src=\"http://pic2.zhimg.com/70/b2a4e298903fe74246abc69c877a8355_b.jpg\" alt=\"\" /></p>\r\n<p>深色小圆领露肩的紧身马甲式，不太是个好选择，因为视力都到了双侧浅色的膀肩上。</p>\r\n<p><img class=\"content-image\" src=\"http://pic1.zhimg.com/70/75289d29c31117309c3601c921174648_b.jpg\" alt=\"\" /></p>\r\n<p>对于这种情况，有两种修正方法。第一是加大领口，不要紧紧地贴着脖子。如下图，同样是圆领深色，加宽一点领口，就会好一点。</p>\r\n<p><img class=\"content-image\" src=\"http://pic4.zhimg.com/70/8fe9e94ce68a9b4a65b62261941e5e33_b.jpg\" alt=\"\" /></p>\r\n<p>或者换件浅色的小圆领，视线焦点也转移了</p>\r\n<p><img class=\"content-image\" src=\"http://pic1.zhimg.com/70/940167ab832b965668ca6048458bfd4c_b.jpg\" alt=\"\" /></p>\r\n<p>能不能穿大衣？当然能，但要看怎么搭配。</p>\r\n<p>象这种斗篷式的，平常人穿起来就显宽，肩宽的人再来一把，就是雪上加霜。下图就感觉是好大一座山的样子</p>\r\n<p><img class=\"content-image\" src=\"http://pic2.zhimg.com/70/7ff09fa3d2a3fa3cea2efe3aaddfca21_b.jpg\" alt=\"\" /></p>\r\n<p>但是换成深色敞开式的大衣呢？这张起的很不错，翻起的大衣领形成了一个弧度，有效的减弱了肩宽。</p>\r\n<p><img class=\"content-image\" src=\"http://pic1.zhimg.com/70/f56ed2b922b3eedb824c23a2ee19718c_b.jpg\" alt=\"\" /></p>\r\n<p>所以总结起来，肩宽的姑娘想穿好，大抵几条：</p>\r\n<p><strong>1、先减肥、瘦下来，手臂围尽量小。<br />2、露肩可以穿，但上面要松，少、不能紧，肩部不能有过多装饰。<br />3、穿有肩外套时，驳头要拉低，最好里面有低领打底和外套形成对比，外套腰部要宽松，不要紧身。<br />4、大 V 领可以穿，但要带能遮不少皮肤的颈饰。圆领可以穿，但别太贴着脖子。<br /><br /></strong></p>\r\n<p>上面举的是欧洲人的例子，其实亚洲名人常人体态中还有一个典型 ，就是日本太子妃小和田雅子。她的肩宽也是日本女性中比较明显的了，遇到高驳头西装打底又高的时候就是这么个粗壮画风。</p>\r\n<p><img class=\"content-image\" src=\"http://pic2.zhimg.com/70/f59f594cb505798a46f8e4804be3b505_b.jpg\" alt=\"\" /></p>\r\n<p>但下面这张就要好很多，为什么 ？一则是因为她年轻，二则是因为脸边的头发是膨胀的，相当于增加了头宽，有效地减小了肩脸宽试的对比，而且这衣服没垫肩。</p>\r\n<p><img class=\"content-image\" src=\"http://pic2.zhimg.com/70/3c5f0ebef1bd4fc1214ee065dcbbab99_b.jpg\" alt=\"\" /></p>\r\n<p>其实她年轻的时候，还更流行宽肩的衣服，但那时只要瘦，也不会觉得特别有问题。</p>\r\n<p><img class=\"content-image\" src=\"http://pic2.zhimg.com/70/c598f262d925c521cc044918e2bb7765_b.jpg\" alt=\"\" /></p>\r\n<p><strong>所以真心话，其实你只要身材够 FIT，大家并不在意你是不是肩很宽。相反，肩宽更多时候意味着衣架子，穿起来是很有气场，是更容易把衣裳穿美的，80 年代就爱走大宽肩路线呢，这么穿你还可以号称复古呢。只是如果你怕肩宽其实是上身壮，那想要穿好，就确实需要更多功夫了。<br /><br />另外，肩宽的人只要记得侧着拍照，其实效果就会好很多啦。</strong></p>\n</div>\n</div>\n\n\n<div class=\"view-more\"><a href=\"http://www.zhihu.com/question/20439450\">查看知乎讨论<span class=\"js-question-holder\"></span></a></div>\n\n</div>\n\n\n</div>\n</div>',
+      topStories: [],
+      allStories: [],
+      date: '',
+      loading: false
+
     }
   },
-  components: {
-    Hello
+  computed: {
+  },
+  created () {
+
+  },
+  ready () {
+    this.getLatest()
+  },
+  attached () {
+  },
+  route: {
+    data: function (transition) {
+      var _this = this
+      _this.is_activate = true
+      transition.next()
+      _this.$nextTick(function () {
+        window.document.body.scrollTop = window.sessionStorage.scrollTop
+      })
+      window.addEventListener('scroll', _this.getScrollData, false)
+    },
+    deactivate: function (transition) {
+      var _this = this
+      window.removeEventListener('scroll', _this.getScrollData, false)
+      window.sessionStorage.scrollTop = window.document.body.scrollTop
+      transition.next()
+    }
+  },
+  methods: {
+    getLatest () {
+      let _this = this
+      _this.loading = true
+      ajax({
+        url: 'http://news-at.zhihu.com/api/4/news/latest',
+        method: 'GET',
+        callback: function (res) {
+          _this.$set('topStories', res.top_stories)
+          _this.allStories.push(res)
+          _this.$set('date', res.date)
+          _this.loading = false
+          console.log(_this.allStories)
+        }
+      })
+    },
+    getNews () {
+      let _this = this
+      _this.loading = true
+      ajax({
+        url: 'http://news.at.zhihu.com/api/4/news/before/' + _this.date,
+        method: 'GET',
+        callback: function (res) {
+          _this.allStories.push(res)
+          _this.$set('date', res.date)
+          _this.loading = false
+          console.log(_this.allStories)
+        }
+      })
+    },
+    getScrollData () {
+      var _this = this
+      if ((window.document.body.offsetHeight + window.document.body.scrollTop) + 100 > window.document.body.scrollHeight && !_this.loading) {
+        _this.getNews()
+      }
+    },
+    replace (str) {
+      return str.replace(/http\w{0,1}:\/\//g, 'https://images.weserv.nl/?url=')
+    }
   }
 }
 </script>
 
 <style lang="scss" rel="stylesheet/scss">
-  @import "../assets/css/swiper-3.3.1.min.css";
+  /*@import "../assets/css/swiper-3.3.1.min.css";*/
   @import "../assets/css/reset";
-  @import "../assets/css/zhihu_news_detail.css";
 
   .header{
-    height: 75px;
+    height: 40px;
     background: #27B4FB;
   }
   .slider{
-    height: 400px;
-    background: #b8dcff;
+    height: 230px;
   }
   .list{
     background: #efefef;
@@ -63,7 +138,6 @@ export default {
     width: 100%;
     /*max-width: 600px;*/
     font-family: Source Sans Pro, Helvetica, sans-serif;
-    text-align: center;
   }
 
   #app a {
@@ -71,4 +145,5 @@ export default {
     text-decoration: none;
     font-size: 30px;
   }
+
 </style>

@@ -1,25 +1,26 @@
 <template>
-  <header-component/>
-  <div>this is template body</div>
-  <other-component/>
+
 </template>
-<style>
-  body{
-    background-color:#ff0000;
-  }
-</style>
+
 <script>
-  import HeaderComponent from './components/header.vue'
-  import OtherComponent from './components/other.vue'
+  /*eslint-disable no-new*/
   export default{
-    data(){
-      return{
-        msg:'hello vue'
+    props: ['top_stories'],
+    data () {
+      return {
+        msg: 'hello vue'
       }
     },
-    components:{
-      'other-component':OtherComponent,
-      HeaderComponent,
+    attached () {
+    },
+    methods: {
+      replace (str) {
+        return str.replace(/http\w{0,1}:\/\//g, 'https://images.weserv.nl/?url=')
+      }
     }
   }
 </script>
+
+<style scoped lang="scss" rel="stylesheet/scss">
+
+</style>

@@ -29,7 +29,7 @@
     <div class="swiper-scrollbar" style="opacity: 0; transition-duration: 400ms;"><div class="swiper-scrollbar-drag" style="height: 145.59px; transition-duration: 0ms; transform: translate3d(0px, 9.76842px, 0px);"></div></div>
   </div>
 </template>
-<style>
+<style scoped >
   html, body {
     position: relative;
     height: 100%;

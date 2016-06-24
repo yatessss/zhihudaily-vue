@@ -9,8 +9,12 @@ Vue.use(VueRouter)
 
 import list from './view/App'
 import demo from './view/demo.vue'
+import detail from './view/detail.vue'
 import Swiper from 'swiper'
 window.Swiper = Swiper
+
+import filters from './filters'
+Object.keys(filters).forEach((k) => Vue.filter(k, filters[k]))
 
 /* eslint-disable no-new */
 var Foo = Vue.extend({
@@ -42,6 +46,9 @@ router.map({
   },
   '/demo': {
     component: demo
+  },
+  '/detail': {
+    component: detail
   }
 })
 // 现在我们可以启动应用了！
