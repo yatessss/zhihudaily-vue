@@ -136,14 +136,9 @@ export default {
     color: #2c3e50;
     height: 100%;
     width: 100%;
-    /*max-width: 600px;*/
     font-family: Source Sans Pro, Helvetica, sans-serif;
   }
 
-  #app a {
-    color: #42b983;
-    text-decoration: none;
-    font-size: 30px;
-  }
+
 
 </style>
