@@ -7,7 +7,7 @@ import VueRouter from 'vue-router'
 Vue.use(VueResource)
 Vue.use(VueRouter)
 
-import list from './view/App'
+import list from './view/list.vue'
 import demo from './view/demo.vue'
 import detail from './view/detail.vue'
 import Swiper from 'swiper'
@@ -17,12 +17,6 @@ import filters from './filters'
 Object.keys(filters).forEach((k) => Vue.filter(k, filters[k]))
 
 /* eslint-disable no-new */
-var Foo = Vue.extend({
-  template: '<p>This is foo!</p>'
-})
-var Bar = Vue.extend({
-  template: '<p>This is bar!</p>'
-})
 let App = Vue.extend({})
 // 路由器需要一个根组件。
 // 出于演示的目的，这里使用一个空的组件，直接使用 HTML 作为应用的模板
@@ -38,16 +32,11 @@ router.map({
   '/': {
     component: list
   },
-  '/foo': {
-    component: Foo
-  },
-  '/bar': {
-    component: Bar
-  },
   '/demo': {
     component: demo
   },
-  '/detail': {
+  '/detail/:id': {
+    name: 'detail',
     component: detail
   }
 })

@@ -8,7 +8,7 @@
  * replace 要替换的部分
  */
 exports.replaceUrl = (srcUrl) => {
-  return srcUrl.replace(/http\w{0,1}:\/\//g, 'https://images.weserv.nl/?url=')
+  return srcUrl.replace(/http\w{0,1}:\/\/pic/g, 'https://images.weserv.nl/?url=pic')
 }
 
 /**

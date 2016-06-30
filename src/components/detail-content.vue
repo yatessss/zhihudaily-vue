@@ -1,5 +1,5 @@
 <template>
-  <div class="detail-content" v-html="content | replaceUrl"></div>
+  <div class="detail-content" v-html="content | replaceUrl" v-cloak></div>
 </template>
 
 <script>
@@ -15,13 +15,13 @@
     },
     methods: {
       replace (str) {
-        return str.replace(/http\w{0,1}:\/\//g, 'https://images.weserv.nl/?url=')
+        return str.replace(/http\w{0,1}:\/\/pic/g, 'https://images.weserv.nl/?url=pic')
       }
     }
   }
 </script>
 
-<style scoped lang="scss" rel="stylesheet/scss">
+<style lang="scss" rel="stylesheet/scss">
 
   .detail-content{
     article,
@@ -264,6 +264,15 @@
       text-align: center;
     }
     .view-more a {
+      font-size: 16px;
+      display: inline-block;
+      width: 125px;
+      height: 30px;
+      line-height: 30px;
+      background: #f0f0f0;
+      color: #B8B8B8;
+    }
+    .content .view-more a {
       font-size: 16px;
       display: inline-block;
       width: 125px;

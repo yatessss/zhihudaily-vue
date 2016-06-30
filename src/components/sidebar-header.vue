@@ -15,7 +15,7 @@
     },
     methods: {
       replace (str) {
-        return str.replace(/http\w{0,1}:\/\//g, 'https://images.weserv.nl/?url=')
+        return str.replace(/http\w{0,1}:\/\/pic/g, 'https://images.weserv.nl/?url=pic')
       }
     }
   }

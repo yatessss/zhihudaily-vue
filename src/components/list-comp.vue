@@ -1,13 +1,13 @@
 <!--列表页单独话题块组件-->
 
 <template>
-  <li v-link="{ path: 'detail'}" @click="setId(item.id)" class="list-detail-box">
+  <li v-link="{name: 'detail', params: { id: id }}" class="list-detail-box" v-cloak>
     <div class="list-content-box">
       <p>{{item.title}}</p>
     </div>
     <div class="list-img-box">
       <img :src="item.images[0] | replaceUrl" alt="">
-      <p v-if="item.multipic" class="tip">多图</p>
+      <p v-if="item.multipic" class="tip"><i class="iconfont">&#xe61c</i>多图</p>
     </div>
   </li>
 </template>
@@ -25,16 +25,20 @@
     },
     methods: {
       replace (str) {
-        return str.replace(/http\w{0,1}:\/\//g, 'https://images.weserv.nl/?url=')
-      },
-      setId (str) {
-        window.sessionStorage.detailId = JSON.stringify(str)
+        return str.replace(/http\w{0,1}:\/\/pic/g, 'https://images.weserv.nl/?url=pic')
       }
     }
   }
 </script>
 
 <style scoped lang="scss" rel="stylesheet/scss">
+  .iconfont {
+    font-family:"iconfont";
+    font-size: 10px;
+    font-style:normal;
+    color: #ffffff;
+    margin-right: 3px;
+  }
   .list-detail-box{
     height: 100px;
     width: 360px;

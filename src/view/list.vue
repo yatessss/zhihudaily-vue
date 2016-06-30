@@ -1,15 +1,17 @@
 <template>
-  <div>
-    <div class="header">
-      这里是header
-    </div>
+  <div class="main-list">
+    <list-header :show-sidebar.sync="showSidebar"> </list-header>
+    <!--侧边栏-->
+    <side-bar :show-sidebar.sync="showSidebar"> </side-bar>
+
+    <!--侧边栏遮罩层-->
+    <div v-if="showSidebar" class="sidebar-mask" @click="hiddenBar"></div>
+
     <!--轮播组件-->
     <slider :top_stories="topStories" v-cloak></slider>
 
     <list-body v-for="item in allStories" :list-info="item"></list-body>
 
-    <a v-link="{ path: 'foo'}">This is foo!</a><br/>
-    <a v-link="{ path: 'bar'}">This is bar!</a> <br/>
     <a v-link="{ path: 'demo'}">This is demo!</a>
   </div>
 </template>
@@ -18,13 +20,17 @@
 import ajax from '../ajax'
 import slider from '../components/slider.vue'
 import listBody from '../components/list-body.vue'
+import sideBar from '../components/sidebar.vue'
+import listHeader from '../components/list-header.vue'
 
 /*eslint-disable no-useless-escape*/
 /*eslint-disable no-new*/
 export default {
   components: {
     slider,
-    listBody
+    listBody,
+    sideBar,
+    listHeader
   },
   data () {
     return {
@@ -32,8 +38,8 @@ export default {
       topStories: [],
       allStories: [],
       date: '',
-      loading: false
-
+      loading: false,
+      showSidebar: false
     }
   },
   computed: {
@@ -75,7 +81,7 @@ export default {
           _this.allStories.push(res)
           _this.$set('date', res.date)
           _this.loading = false
-          console.log(_this.allStories)
+//          console.log(_this.allStories)
         }
       })
     },
@@ -89,7 +95,7 @@ export default {
           _this.allStories.push(res)
           _this.$set('date', res.date)
           _this.loading = false
-          console.log(_this.allStories)
+//          console.log(_this.allStories)
         }
       })
     },
@@ -100,7 +106,15 @@ export default {
       }
     },
     replace (str) {
-      return str.replace(/http\w{0,1}:\/\//g, 'https://images.weserv.nl/?url=')
+      return str.replace(/http\w{0,1}:\/\/pic/g, 'https://images.weserv.nl/?url=pic')
+    },
+    showBar () {
+      document.body.style.overflow = 'hidden'
+      this.showSidebar = !this.showSidebar
+    },
+    hiddenBar () {
+      document.body.style.overflow = 'auto'
+      this.showSidebar = !this.showSidebar
     }
   }
 }
@@ -109,13 +123,30 @@ export default {
 <style lang="scss" rel="stylesheet/scss">
   /*@import "../assets/css/swiper-3.3.1.min.css";*/
   @import "../assets/css/reset";
-
-  .header{
-    height: 40px;
-    background: #27B4FB;
+  @font-face {
+    font-family: 'iconfont';
+    src: url('//at.alicdn.com/t/font_1467285107_1033466.eot'); /* IE9*/
+    src: url('//at.alicdn.com/t/font_1467285107_1033466.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('//at.alicdn.com/t/font_1467285107_1033466.woff') format('woff'), /* chrome、firefox */
+    url('//at.alicdn.com/t/font_1467285107_1033466.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('//at.alicdn.com/t/font_1467285107_1033466.svg#iconfont') format('svg'); /* iOS 4.1- */
   }
-  .slider{
-    height: 230px;
+
+
+  .main-list{
+    margin-top: 50px;
+  }
+
+  .sidebar-mask{
+    /*width: 357px;*/
+    /*height: 667px;*/
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 5;
+    background: rgba(0, 0, 0, 0.7);
   }
   .list{
     background: #efefef;

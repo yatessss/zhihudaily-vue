@@ -2,7 +2,7 @@
   <div class="slider">
     <div class="swiper-container">
       <div class="swiper-wrapper">
-        <div v-for="item in top_stories" class="swiper-slide" :style="{ backgroundImage: 'url(' + replace(item.image) + ')' } ">
+        <div v-for="item in top_stories" class="swiper-slide" :style="{ backgroundImage: 'url(' + replace(item.image) + ')' }" v-link="{name: 'detail', params: { id: item.id }}">
           <div class="swiper-mask"></div>
           <h1 class="slider-title">{{item.title}}</h1>
         </div>
@@ -19,12 +19,9 @@
     props: ['top_stories'],
     data () {
       return {
-        msg: 'hello vue'
       }
     },
     ready () {
-    },
-    attached () {
       new window.Swiper('.swiper-container', {
         pagination: '.swiper-pagination',
         paginationClickable: true,
@@ -33,12 +30,13 @@
         autoplay: 4000,
         autoplayDisableOnInteraction: false,
         observer: true,
-        lazyLoading: true
+        lazyLoading: true,
+        resistanceRatio: 0
       })
     },
     methods: {
       replace (str) {
-        return str.replace(/http\w{0,1}:\/\//g, 'https://images.weserv.nl/?url=')
+        return str.replace(/http\w{0,1}:\/\/pic/g, 'https://images.weserv.nl/?url=pic')
       }
     }
   }
@@ -66,10 +64,10 @@
     }
     .slider-title{
       position: absolute;
-      bottom: 15px;
+      bottom: 23px;
       line-height: 1.2;
       left: 0;
-      padding: 0 20px;
+      padding: 0 18px;
       font-weight: 300;
       font-size: 21px;
       color: #ffffff;
@@ -80,8 +78,8 @@
     height: 6px;
     display: inline-block;
     border-radius: 100%;
-    background: #000;
-    opacity: .2;
+    background: #5a5a5a;
+    opacity: .8;
   }
   .swiper-pagination-bullet-active{
     opacity: 1;
