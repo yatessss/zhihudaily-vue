@@ -41,7 +41,7 @@
   }
   .list-detail-box{
     height: 100px;
-    width: 360px;
+    width: 97%;
     margin: 8px auto 0 auto;
     background: #ffffff;
     padding: 13px;

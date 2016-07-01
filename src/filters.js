@@ -28,7 +28,7 @@ exports.subStr = (str, number) => {
 
 /**
  * 格式化时间戳
- * 1461658688000 | formatTime "yyyy-MM-dd HH:mm:ss"
+ * 1461658688000 | formatTime "yyyy-MM-dd hh:mm:ss"
  */
 exports.formatTime = (timeStamp, fmt) => { // author: meizz
   if (!timeStamp) {

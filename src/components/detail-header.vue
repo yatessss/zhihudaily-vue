@@ -4,8 +4,8 @@
     <div class="header-cont"></div>
     <div class="header-icon" @click="share"><i class="iconfont">&#xe61f</i></div>
     <div class="header-icon" @click="showCollection"><i :class="{'collection': collection}" class="iconfont">&#xe604</i></div>
-    <div class="header-icon"><i class="iconfont">&#xe606</i><span>{{comments}}</span></div>
-    <div class="header-icon"><i class="iconfont">&#xe609</i><span>{{popularity}}</span></div>
+    <div class="header-icon" v-link="{ path: '/comments'}"><i class="iconfont">&#xe606</i><span>{{comments}}</span></div>
+    <div class="header-icon"><i class="iconfont">&#xe611</i><span>{{popularity}}</span></div>
   </div>
 </template>
 
@@ -21,9 +21,6 @@
     ready () {
     },
     methods: {
-      replace (str) {
-        return str.replace(/http\w{0,1}:\/\/pic/g, 'https://images.weserv.nl/?url=pic')
-      },
       goBack () {
         window.history.back()
       },
@@ -51,7 +48,7 @@
     top: 0;
     z-index: 4;
     height: 50px;
-    width: 375px;
+    width: 100%;
     background: #00A2EA;
     display: flex;
     flex-direction: row;

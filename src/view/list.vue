@@ -53,16 +53,16 @@ export default {
   attached () {
   },
   route: {
-    data: function (transition) {
+    data (transition) {
       var _this = this
       _this.is_activate = true
-      transition.next()
       _this.$nextTick(function () {
         window.document.body.scrollTop = window.sessionStorage.scrollTop
       })
       window.addEventListener('scroll', _this.getScrollData, false)
+      transition.next()
     },
-    deactivate: function (transition) {
+    deactivate (transition) {
       var _this = this
       window.removeEventListener('scroll', _this.getScrollData, false)
       window.sessionStorage.scrollTop = window.document.body.scrollTop
@@ -125,13 +125,12 @@ export default {
   @import "../assets/css/reset";
   @font-face {
     font-family: 'iconfont';
-    src: url('//at.alicdn.com/t/font_1467285107_1033466.eot'); /* IE9*/
-    src: url('//at.alicdn.com/t/font_1467285107_1033466.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-    url('//at.alicdn.com/t/font_1467285107_1033466.woff') format('woff'), /* chrome、firefox */
-    url('//at.alicdn.com/t/font_1467285107_1033466.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
-    url('//at.alicdn.com/t/font_1467285107_1033466.svg#iconfont') format('svg'); /* iOS 4.1- */
+    src: url('//at.alicdn.com/t/font_1467357626_5109937.eot'); /* IE9*/
+    src: url('//at.alicdn.com/t/font_1467357626_5109937.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('//at.alicdn.com/t/font_1467357626_5109937.woff') format('woff'), /* chrome、firefox */
+    url('//at.alicdn.com/t/font_1467357626_5109937.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('//at.alicdn.com/t/font_1467357626_5109937.svg#iconfont') format('svg'); /* iOS 4.1- */
   }
-
 
   .main-list{
     margin-top: 50px;

@@ -1,7 +1,7 @@
 <template>
   <div>
     <!--详情页头部-->
-    <detail-header :popularity="popularity" :comments="comments" :show-share.sync="showShare"></detail-header>
+    <detail-header :popularity="extra.popularity" :comments="extra.comments" :show-share.sync="showShare"></detail-header>
 
     <div class="detail-img-box" :style="{ backgroundImage: 'url(' + replace(image) + ')' }">
       <div class="detail-mask"></div>
@@ -56,8 +56,7 @@
         imageSource: '',
         section: {},
         thumbnail: '',
-        popularity: '...',
-        comments: '...',
+        extra: {},
         showShare: false
       }
     },
@@ -65,22 +64,23 @@
 
     },
     route: {
-      activate: function (transition) {
+      activate (transition) {
         var _this = this
-        transition.next()
         _this.getDetails()
         _this.getExtra()
         _this.$nextTick(function () {
           window.document.body.scrollTop = 0
         })
-        window.addEventListener('scroll', _this.getScrollData, false)
+        transition.next()
       },
-      deactivate: function (transition) {
-        var _this = this
+      deactivate (transition) {
+        let _this = this
 //        初始化数据
+//        把下个页面需要的值存入session
+        window.sessionStorage.detailId = _this.$route.params.id
+        window.sessionStorage.extra = JSON.stringify(_this.extra)
         _this.init()
         transition.next()
-        window.removeEventListener('scroll', _this.getScrollData, false)
       }
     },
     methods: {
@@ -98,8 +98,10 @@
             _this.$set('image', res.image)
             _this.$set('title', res.title)
             _this.$set('imageSource', res.image_source)
-            _this.$set('section', res.section)
-            _this.$set('thumbnail', res.section.thumbnail)
+            if (res.section) {
+              _this.$set('section', res.section)
+              _this.$set('thumbnail', res.section.thumbnail)
+            }
             console.log(_this.section)
             _this.loading = false
           }
@@ -113,8 +115,7 @@
         _this.imageSource = ''
         _this.section = ''
         _this.thumbnail = ''
-        _this.popularity = '···'
-        _this.comments = '···'
+        _this.extra = {}
       },
       getExtra () {
         let _this = this
@@ -122,8 +123,7 @@
           url: 'http://news-at.zhihu.com/api/4/story-extra/' + _this.$route.params.id,
           method: 'GET',
           callback: function (res) {
-            _this.$set('popularity', res.popularity)
-            _this.$set('comments', res.comments)
+            _this.$set('extra', res)
           }
         })
       },
@@ -220,7 +220,7 @@
     position: absolute;
     z-index: 0;
     height: 200px;
-    width: 375px;
+    width: 100%;
     background-size: 100%;
     background-position: center;
     background-repeat: no-repeat;

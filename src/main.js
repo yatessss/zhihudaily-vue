@@ -9,6 +9,7 @@ Vue.use(VueRouter)
 
 import list from './view/list.vue'
 import demo from './view/demo.vue'
+import comments from './view/comments.vue'
 import detail from './view/detail.vue'
 import Swiper from 'swiper'
 window.Swiper = Swiper
@@ -38,6 +39,9 @@ router.map({
   '/detail/:id': {
     name: 'detail',
     component: detail
+  },
+  '/comments': {
+    component: comments
   }
 })
 // 现在我们可以启动应用了！

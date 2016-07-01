@@ -42,7 +42,7 @@
     top: 0;
     z-index: 4;
     height: 50px;
-    width: 375px;
+    width: 100%;
     background: #00A2EA;
     display: flex;
     flex-direction: row;
