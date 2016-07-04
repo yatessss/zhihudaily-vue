@@ -89,7 +89,7 @@ module.exports = {
       remPrecision: 3         // rem precision (default: 6)
     })],
     autoprefixer: {
-      browsers: ["Android >= 2.3", "ChromeAndroid > 1%", "iOS >= 4"],
+      browsers: ["Android >= 2.3", "iOS >= 4"], //, "ChromeAndroid > 1%"
       cascade: false  // 不美化输出 css
     }
   }
