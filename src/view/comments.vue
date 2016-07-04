@@ -77,7 +77,7 @@
         _this.loading = true
         ajax({
 //          url: 'http://news-at.zhihu.com/api/4/story/' + _this.detailId + '/long-comments',
-          url: 'http://112.74.217.65:8888/news-at/api/4/story/' + _this.detailId + '/long-comments',
+          url: 'http://api.yatessss.com:8888/news-at/api/4/story/' + _this.detailId + '/long-comments',
           method: 'GET',
           callback: function (res) {
             _this.$set('longComments', res.comments)
@@ -90,7 +90,7 @@
         _this.loading = true
         ajax({
 //          url: 'http://news-at.zhihu.com/api/4/story/' + _this.detailId + '/short-comments',
-          url: 'http://112.74.217.65:8888/news-at/api/4/story/' + _this.detailId + '/short-comments',
+          url: 'http://api.yatessss.com:8888/news-at/api/4/story/' + _this.detailId + '/short-comments',
           method: 'GET',
           callback: function (res) {
             _this.$set('shortComments', res.comments)

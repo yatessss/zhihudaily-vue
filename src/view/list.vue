@@ -76,7 +76,7 @@ export default {
       _this.loading = true
       ajax({
 //        url: 'http://news-at.zhihu.com/api/4/news/latest',
-        url: 'http://112.74.217.65:8888/news-at/api/4/news/latest',
+        url: 'http://api.yatessss.com:8888/news-at/api/4/news/latest',
         method: 'GET',
         callback: function (res) {
           _this.$set('topStories', res.top_stories)
@@ -92,7 +92,7 @@ export default {
       _this.loading = true
       ajax({
 //        url: 'http://news.at.zhihu.com/api/4/news/before/' + _this.date,
-        url: 'http://112.74.217.65:8888/news-before/api/4/news/before/' + _this.date,
+        url: 'http://api.yatessss.com:8888/news-before/api/4/news/before/' + _this.date,
         method: 'GET',
         callback: function (res) {
           _this.allStories.push(res)

@@ -102,7 +102,7 @@
         _this.loading = true
         ajax({
 //          url: 'http://news-at.zhihu.com/api/4/news/' + _this.$route.params.id,
-          url: 'http://112.74.217.65:8888/news-at/api/4/news/' + _this.$route.params.id,
+          url: 'http://api.yatessss.com:8888/news-at/api/4/news/' + _this.$route.params.id,
           method: 'GET',
           callback: function (res) {
             _this.$set('body', res.body)
@@ -138,7 +138,7 @@
         let _this = this
         ajax({
 //          url: 'http://news-at.zhihu.com/api/4/story-extra/' + _this.$route.params.id,
-          url: 'http://112.74.217.65:8888/news-at/api/4/story-extra/' + _this.$route.params.id,
+          url: 'http://api.yatessss.com:8888/news-at/api/4/story-extra/' + _this.$route.params.id,
           method: 'GET',
           callback: function (res) {
             _this.$set('extra', res)
