@@ -2,69 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aeb6df1e-3149-4620-ba98-e02030586c3d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/app.5332e6759ef3941e51955dd5185f2787.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/app.5332e6759ef3941e51955dd5185f2787.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/app.24c45a8b5501feb10141.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/manifest.b562109e8f441066f4f0.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/manifest.b562109e8f441066f4f0.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/vendor.9dc21249e1b553c75b4a.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/vendor.9dc21249e1b553c75b4a.js.map" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.babelrc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.editorconfig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.eslintrc.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/build.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/dev-client.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/dev-server.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/utils.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/webpack.base.conf.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/webpack.dev.conf.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/webpack.prod.conf.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/config/dev.env.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/config/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/config/prod.env.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/config/test.env.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/lib/swiper-3.3.1.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/params.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/ajax.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/css/reset.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/css/swiper-3.3.1.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/css/zhihu_news_detail.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/img/Screenshot_2016-06-30-19-52-23.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/img/Screenshot_2016-06-30-19-52-25.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/img/logo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/components/comments-comp.vue" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/components/detail-content.vue" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/components/detail-header.vue" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/components/list-body.vue" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/components/list-comp.vue" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/components/list-header.vue" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/components/sidebar-header.vue" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/components/sidebar.vue" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/components/slider.vue" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/filters.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/view/comments.vue" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/view/demo.vue" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/view/detail.vue" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/view/list.vue" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/view/recommender.vue" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/.gitkeep" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/dist/static/css/app.5332e6759ef3941e51955dd5185f2787.css" afterPath="$PROJECT_DIR$/static/css/app.5332e6759ef3941e51955dd5185f2787.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/dist/static/css/app.5332e6759ef3941e51955dd5185f2787.css.map" afterPath="$PROJECT_DIR$/static/css/app.5332e6759ef3941e51955dd5185f2787.css.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/dist/static/img/Screenshot_2016-06-30-19-52-23.2ee04d1.jpg" afterPath="$PROJECT_DIR$/static/img/Screenshot_2016-06-30-19-52-23.2ee04d1.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/dist/static/img/Screenshot_2016-06-30-19-52-25.79c8945.jpg" afterPath="$PROJECT_DIR$/static/img/Screenshot_2016-06-30-19-52-25.79c8945.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/dist/static/js/app.24c45a8b5501feb10141.js" afterPath="$PROJECT_DIR$/static/js/app.24c45a8b5501feb10141.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/dist/static/js/app.24c45a8b5501feb10141.js.map" afterPath="$PROJECT_DIR$/static/js/app.24c45a8b5501feb10141.js.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/dist/static/js/manifest.b562109e8f441066f4f0.js" afterPath="$PROJECT_DIR$/static/js/manifest.b562109e8f441066f4f0.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/dist/static/js/manifest.b562109e8f441066f4f0.js.map" afterPath="$PROJECT_DIR$/static/js/manifest.b562109e8f441066f4f0.js.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/dist/static/js/vendor.9dc21249e1b553c75b4a.js" afterPath="$PROJECT_DIR$/static/js/vendor.9dc21249e1b553c75b4a.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/dist/static/js/vendor.9dc21249e1b553c75b4a.js.map" afterPath="$PROJECT_DIR$/static/js/vendor.9dc21249e1b553c75b4a.js.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/img/Screenshot_2016-06-30-19-52-23.jpg" afterPath="$PROJECT_DIR$/static/img/Screenshot_2016-06-30-19-52-23.2ee04d1.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/img/Screenshot_2016-06-30-19-52-25.jpg" afterPath="$PROJECT_DIR$/static/img/Screenshot_2016-06-30-19-52-25.79c8945.jpg" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/css/app.5332e6759ef3941e51955dd5185f2787.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/css/app.5332e6759ef3941e51955dd5185f2787.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/img/Screenshot_2016-06-30-19-52-23.2ee04d1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/img/Screenshot_2016-06-30-19-52-25.79c8945.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/js/app.24c45a8b5501feb10141.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/js/app.24c45a8b5501feb10141.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/js/manifest.b562109e8f441066f4f0.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/js/manifest.b562109e8f441066f4f0.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/js/vendor.9dc21249e1b553c75b4a.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/js/vendor.9dc21249e1b553c75b4a.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/lib/swiper-3.3.1.min.js" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
     </list>
     <ignored path="zhihudaily-vue.iws" />
@@ -86,11 +35,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="app.24c45a8b5501feb10141.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/static/js/app.24c45a8b5501feb10141.js">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="190">
+              <caret line="10" column="370" selection-start-line="10" selection-start-column="370" selection-end-line="10" selection-end-column="370" />
               <folding />
             </state>
           </provider>
@@ -104,9 +53,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/dist/index.html" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -167,20 +116,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zhihudaily-vue" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zhihudaily-vue" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -192,6 +127,9 @@
     <property name="editor.config.accepted" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
     </key>
@@ -264,15 +202,16 @@
       <workItem from="1467627751131" duration="514000" />
       <workItem from="1467629831837" duration="86000" />
       <workItem from="1467632796212" duration="106000" />
+      <workItem from="1467636007641" duration="107000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="706000" />
+    <option name="totallyTimeSpent" value="813000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="20" y="23" width="1900" height="979" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24960086" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -300,64 +239,38 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="7" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dist/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="7" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="7" column="7" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dist/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="370" selection-start-line="10" selection-start-column="370" selection-end-line="10" selection-end-column="370" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/js/app.24c45a8b5501feb10141.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore" />
+    <entry file="file://$PROJECT_DIR$/dist/index.html" />
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore" />
+    <entry file="file://$PROJECT_DIR$/.gitignore" />
+    <entry file="file://$PROJECT_DIR$/dist/index.html" />
+    <entry file="file://$PROJECT_DIR$/static/js/app.24c45a8b5501feb10141.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-19">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="370" selection-start-line="10" selection-start-column="370" selection-end-line="10" selection-end-column="370" />
           <folding />
         </state>
       </provider>
