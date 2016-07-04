@@ -62,7 +62,8 @@
       getList () {
         let _this = this
         ajax({
-          url: 'http://news-at.zhihu.com/api/4/themes',
+//          url: 'http://news-at.zhihu.com/api/4/themes',
+          url: 'http://112.74.217.65:8888/news-at/api/4/themes',
           method: 'GET',
           callback: function (res) {
             _this.$set('list', res.others)
@@ -72,6 +73,7 @@
       },
       hiddenBar () {
         document.body.style.overflow = 'auto'
+        window.document.querySelector('html').style.overflow = 'auto'
         this.showSidebar = !this.showSidebar
       }
     }

@@ -1,17 +1,26 @@
+<!--详情页-->
 <template>
   <div>
     <!--详情页头部-->
     <detail-header :popularity="extra.popularity" :comments="extra.comments" :show-share.sync="showShare"></detail-header>
 
-    <div class="detail-img-box" :style="{ backgroundImage: 'url(' + replace(image) + ')' }">
+    <div class="detail-img-box margin-top" :style="{ backgroundImage: 'url(' + replace(image) + ')' }">
       <div class="detail-mask"></div>
       <h1 class="detail-title">{{title}}</h1>
       <p class="detail-image-source">{{imageSource}}</p>
     </div>
 
-    <detail-content class="margin-top" :content="body"> </detail-content>
+    <!--推荐者部分-->
+    <div v-link="{path: '/recommenders' }" v-if="recommenders.length !== 0" class="recommenders-box">
+      <p>推荐者</p>
+      <div class="recommenders-item" v-for="item in recommenders">
+        <img :src="item.avatar | replaceUrl" alt="">
+      </div>
+    </div>
 
-    <div v-if="section" class="section-box" v-cloak>
+    <detail-content  :content="body"> </detail-content>
+
+    <div v-if="section.name" class="section-box" v-cloak>
       <div class="section-btn">
         <img :src="thumbnail | replaceUrl" alt="">
         <p>本文来自: {{section.name}} · 合集</p>
@@ -57,7 +66,8 @@
         section: {},
         thumbnail: '',
         extra: {},
-        showShare: false
+        showShare: false,
+        recommenders: []
       }
     },
     ready () {
@@ -91,18 +101,21 @@
         let _this = this
         _this.loading = true
         ajax({
-          url: 'http://news-at.zhihu.com/api/4/news/' + _this.$route.params.id,
+//          url: 'http://news-at.zhihu.com/api/4/news/' + _this.$route.params.id,
+          url: 'http://112.74.217.65:8888/news-at/api/4/news/' + _this.$route.params.id,
           method: 'GET',
           callback: function (res) {
             _this.$set('body', res.body)
             _this.$set('image', res.image)
             _this.$set('title', res.title)
             _this.$set('imageSource', res.image_source)
+            if (res.recommenders) {
+              _this.$set('recommenders', res.recommenders)
+            }
             if (res.section) {
               _this.$set('section', res.section)
               _this.$set('thumbnail', res.section.thumbnail)
             }
-            console.log(_this.section)
             _this.loading = false
           }
         })
@@ -115,12 +128,17 @@
         _this.imageSource = ''
         _this.section = ''
         _this.thumbnail = ''
-        _this.extra = {}
+        _this.extra = {
+          popularity: '···',
+          comments: '···'
+        }
+        _this.recommenders = []
       },
       getExtra () {
         let _this = this
         ajax({
-          url: 'http://news-at.zhihu.com/api/4/story-extra/' + _this.$route.params.id,
+//          url: 'http://news-at.zhihu.com/api/4/story-extra/' + _this.$route.params.id,
+          url: 'http://112.74.217.65:8888/news-at/api/4/story-extra/' + _this.$route.params.id,
           method: 'GET',
           callback: function (res) {
             _this.$set('extra', res)
@@ -164,8 +182,6 @@
   .color-yellow{
     background: #FFCE00;
   }
-
-
   .margin-top{
     margin-top: 50px;
   }
@@ -217,7 +233,7 @@
     }
   }
   .detail-img-box{
-    position: absolute;
+    position: relative;
     z-index: 0;
     height: 200px;
     width: 100%;
@@ -288,4 +304,29 @@
     }
   }
 
+  .recommenders-box{
+    background: #efefef;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-left: 70px;
+    p{
+      position: absolute;
+      top: 13px;
+      left: 20px;
+      font-size: 13px;
+      font-weight: bold;
+    }
+    .recommenders-item{
+      height: 30px;
+      width: 30px;
+      margin: 7px;
+      >img{
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+      }
+    }
+  }
 </style>

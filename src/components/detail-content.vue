@@ -169,9 +169,9 @@
     .content-wrap a {
       word-break: break-all;
     }
-    .headline {
-      border-bottom: 4px solid #f6f6f6;
-    }
+    /*.headline {*/
+      /*border-bottom: 4px solid #f6f6f6;*/
+    /*}*/
     .headline-title.onlyheading {
       margin: 20px 0;
     }
@@ -394,7 +394,7 @@
       margin-right: 0;
     }
     .headline .img-place-holder {
-      height: 200px;
+      height: 0px;
     }
     .from-column {
       width: 280px;
@@ -410,7 +410,7 @@
       background-image: url(http://static.daily.zhihu.com/img/News_Column_Entrance_Highlight.png);
     }
     .night .headline {
-      border-bottom: 4px solid #303030;
+      border-bottom: 2px solid #303030; /*px*/
     }
     .night img {
       -webkit-mask-image: -webkit-gradient(linear, 0 0, 0 100%, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7)));

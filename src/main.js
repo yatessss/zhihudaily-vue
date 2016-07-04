@@ -11,6 +11,7 @@ import list from './view/list.vue'
 import demo from './view/demo.vue'
 import comments from './view/comments.vue'
 import detail from './view/detail.vue'
+import recommenders from './view/recommender.vue'
 import Swiper from 'swiper'
 window.Swiper = Swiper
 
@@ -42,6 +43,9 @@ router.map({
   },
   '/comments': {
     component: comments
+  },
+  '/recommenders': {
+    component: recommenders
   }
 })
 // 现在我们可以启动应用了！

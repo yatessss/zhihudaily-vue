@@ -57,3 +57,17 @@ exports.formatTime = (timeStamp, fmt) => { // author: meizz
   }
   return fmt
 }
+
+/**
+ * 把4位数转换成K
+ *
+ *
+ */
+exports.toK = (str) => {
+  if (str > 999) {
+    let item = (str / 1000) + ''
+    return item.substring(0, item.length - 2) + 'K'
+  } else {
+    return str
+  }
+}

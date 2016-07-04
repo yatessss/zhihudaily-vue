@@ -5,7 +5,7 @@
     <div class="header-icon" @click="share"><i class="iconfont">&#xe61f</i></div>
     <div class="header-icon" @click="showCollection"><i :class="{'collection': collection}" class="iconfont">&#xe604</i></div>
     <div class="header-icon" v-link="{ path: '/comments'}"><i class="iconfont">&#xe606</i><span>{{comments}}</span></div>
-    <div class="header-icon"><i class="iconfont">&#xe611</i><span>{{popularity}}</span></div>
+    <div class="header-icon"><i class="iconfont">&#xe611</i><span>{{popularity | toK}}</span></div>
   </div>
 </template>
 

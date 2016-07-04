@@ -1,3 +1,4 @@
+<!--列表页-->
 <template>
   <div class="main-list">
     <list-header :show-sidebar.sync="showSidebar"> </list-header>
@@ -74,7 +75,8 @@ export default {
       let _this = this
       _this.loading = true
       ajax({
-        url: 'http://news-at.zhihu.com/api/4/news/latest',
+//        url: 'http://news-at.zhihu.com/api/4/news/latest',
+        url: 'http://112.74.217.65:8888/news-at/api/4/news/latest',
         method: 'GET',
         callback: function (res) {
           _this.$set('topStories', res.top_stories)
@@ -89,7 +91,8 @@ export default {
       let _this = this
       _this.loading = true
       ajax({
-        url: 'http://news.at.zhihu.com/api/4/news/before/' + _this.date,
+//        url: 'http://news.at.zhihu.com/api/4/news/before/' + _this.date,
+        url: 'http://112.74.217.65:8888/news-before/api/4/news/before/' + _this.date,
         method: 'GET',
         callback: function (res) {
           _this.allStories.push(res)
@@ -109,11 +112,13 @@ export default {
       return str.replace(/http\w{0,1}:\/\/pic/g, 'https://images.weserv.nl/?url=pic')
     },
     showBar () {
-      document.body.style.overflow = 'hidden'
+      window.document.body.style.overflow = 'hidden'
+      window.document.querySelector('html').style.overflow = 'hidden'
       this.showSidebar = !this.showSidebar
     },
     hiddenBar () {
-      document.body.style.overflow = 'auto'
+      window.document.body.style.overflow = 'auto'
+      window.document.querySelector('html').style.overflow = 'auto'
       this.showSidebar = !this.showSidebar
     }
   }
