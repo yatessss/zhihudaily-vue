@@ -18,13 +18,6 @@
     components: {
       listComp
     },
-    data () {
-      return {
-        msg: 'hello vue'
-      }
-    },
-    attached () {
-    },
     methods: {
       replace (str) {
         return str.replace(/http\w{0,1}:\/\/pic/g, 'https://images.weserv.nl/?url=pic')
@@ -42,5 +35,7 @@
     color: #76787e;
     margin-left: 15px;
     margin-bottom: 12px;
+    font-size: 14px;
+    font-weight: 500;
   }
 </style>

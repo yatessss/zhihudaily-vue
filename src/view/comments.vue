@@ -16,7 +16,7 @@
       </div>
       <comments-comp @click="show" v-for="item in longComments" :item="item"></comments-comp>
     </ul>
-    <ul class="short-comments">
+    <ul class="short-comments" id="short-comments-top">
       <li class="short-comments-nav" @click="getShortComments"><span>{{extra.short_comments}}</span> 条短评 <i class="iconfont down">&#xe628</i></li>
       <comments-comp @click="show" v-for="item in shortComments" :item="item"></comments-comp>
     </ul>
@@ -48,7 +48,9 @@
         shortComments: [],
         detailId: '',
         extra: {},
-        showReply: false
+        showReply: false,
+        loading: false,
+        id: ''
       }
     },
     attached () {
@@ -62,9 +64,14 @@
         _this.$nextTick(function () {
           window.document.body.scrollTop = 0
         })
+        window.addEventListener('scroll', _this.getScrollData, false)
         transition.next()
       },
       deactivate (transition) {
+        var _this = this
+        this.shortComments = []
+        this.longComments = []
+        window.removeEventListener('scroll', _this.getScrollData, false)
         transition.next()
       }
     },
@@ -88,12 +95,33 @@
       getShortComments () {
         let _this = this
         _this.loading = true
+        window.document.getElementById('short-comments-top').scrollTop = 0
         ajax({
 //          url: 'http://news-at.zhihu.com/api/4/story/' + _this.detailId + '/short-comments',
           url: 'http://api.yatessss.com:8888/news-at/api/4/story/' + _this.detailId + '/short-comments',
           method: 'GET',
           callback: function (res) {
             _this.$set('shortComments', res.comments)
+            _this.$set('id', _this.shortComments[_this.shortComments.length - 1].id)
+            _this.loading = false
+          }
+        })
+      },
+      getScrollData () {
+        var _this = this
+        if ((window.document.body.offsetHeight + window.document.body.scrollTop) + 100 > window.document.body.scrollHeight && !_this.loading) {
+          _this.getShortCommentsNext()
+        }
+      },
+      getShortCommentsNext () {
+        let _this = this
+        _this.loading = true
+        ajax({
+          url: 'http://api.yatessss.com:8888/news-at/api/4/story/' + _this.detailId + '/short-comments/before/' + _this.id,
+          method: 'GET',
+          callback: function (res) {
+            _this.$set('shortComments', _this.shortComments.concat(res.comments))
+            _this.$set('id', _this.shortComments[_this.shortComments.length - 1].id)
             _this.loading = false
           }
         })

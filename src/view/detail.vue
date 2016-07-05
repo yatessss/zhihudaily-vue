@@ -20,7 +20,7 @@
 
     <detail-content  :content="body"> </detail-content>
 
-    <div v-if="section.name" class="section-box" v-cloak>
+    <div v-if="section.name" class="section-box" v-link="{path: '/section'}">
       <div class="section-btn">
         <img :src="thumbnail | replaceUrl" alt="">
         <p>本文来自: {{section.name}} · 合集</p>

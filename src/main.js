@@ -8,10 +8,10 @@ Vue.use(VueResource)
 Vue.use(VueRouter)
 
 import list from './view/list.vue'
-import demo from './view/demo.vue'
 import comments from './view/comments.vue'
 import detail from './view/detail.vue'
 import recommenders from './view/recommender.vue'
+import section from './view/section.vue'
 import Swiper from 'swiper'
 window.Swiper = Swiper
 
@@ -34,9 +34,6 @@ router.map({
   '/': {
     component: list
   },
-  '/demo': {
-    component: demo
-  },
   '/detail/:id': {
     name: 'detail',
     component: detail
@@ -46,6 +43,9 @@ router.map({
   },
   '/recommenders': {
     component: recommenders
+  },
+  '/section': {
+    component: section
   }
 })
 // 现在我们可以启动应用了！

@@ -4,9 +4,10 @@
   <li v-link="{name: 'detail', params: { id: id }}" class="list-detail-box" v-cloak>
     <div class="list-content-box">
       <p>{{item.title}}</p>
+      <p class="time" v-if="item.display_date">{{item.display_date}}</p>
     </div>
     <div class="list-img-box">
-      <img :src="item.images[0] | replaceUrl" alt="">
+      <img :src="images | replaceUrl" alt="">
       <p v-if="item.multipic" class="tip"><i class="iconfont">&#xe61c</i>多图</p>
     </div>
   </li>
@@ -18,7 +19,8 @@
     props: ['item'],
     data () {
       return {
-        id: this.item.id
+        id: this.item.id,
+        images: this.item.images[0]
       }
     },
     attached () {
@@ -40,6 +42,7 @@
     margin-right: 3px;
   }
   .list-detail-box{
+    position: relative;
     height: 100px;
     width: 97%;
     margin: 8px auto 0 auto;
@@ -56,6 +59,13 @@
       >p{
         font-size: 17px;
         line-height: 1.2;
+      }
+      .time{
+        position: absolute;
+        bottom: 10px;
+        left: 13px;
+        font-size: 13px;
+        color: #b0b0b0;
       }
     }
     .list-img-box{

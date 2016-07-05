@@ -1,3 +1,4 @@
+<!--推荐者页面-->
 <template>
   <div>
     <!--头部-->
@@ -45,6 +46,7 @@
         transition.next()
       },
       deactivate (transition) {
+        this.recommenders = []
         transition.next()
       }
     },
@@ -61,7 +63,6 @@
           method: 'GET',
           callback: function (res) {
             _this.$set('recommenders', res.items[0].recommenders)
-            console.log(_this.recommenders)
             _this.loading = false
           }
         })
