@@ -76,6 +76,9 @@
     route: {
       activate (transition) {
         var _this = this
+        if (transition.from.path === '/') {
+          window.sessionStorage.sectionScrollTop = 0
+        }
         _this.getDetails()
         _this.getExtra()
         _this.$nextTick(function () {
@@ -89,6 +92,7 @@
 //        把下个页面需要的值存入session
         window.sessionStorage.detailId = _this.$route.params.id
         window.sessionStorage.extra = JSON.stringify(_this.extra)
+        window.sessionStorage.sectionId = JSON.stringify(_this.section.id)
         _this.init()
         transition.next()
       }

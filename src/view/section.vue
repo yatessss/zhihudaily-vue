@@ -25,15 +25,19 @@
       return {
         stories: [],
         timestamp: '',
-        name: ''
+        name: '',
+        sectionId: ''
       }
     },
-    ready () {
-      this.getLatest()
-    },
+//    ready () {
+//      this.getLatest()
+//    },
     route: {
-      data (transition) {
+      activate (transition) {
         var _this = this
+        console.log(transition)
+        _this.sectionId = window.sessionStorage.sectionId
+        this.getLatest()
         _this.$nextTick(function () {
           window.document.body.scrollTop = window.sessionStorage.sectionScrollTop
         })
@@ -55,16 +59,14 @@
         let _this = this
         _this.loading = true
         ajax({
-          url: 'http://api.yatessss.com:8888/news-at/api/3/section/34',
+          url: 'http://api.yatessss.com:8888/news-at/api/3/section/' + _this.sectionId,
           method: 'GET',
           callback: function (res) {
             _this.stories.concat(res.stories)
-            console.log(res.stories)
             _this.$set('stories', res.stories)
             _this.$set('timestamp', res.timestamp)
             _this.$set('name', res.name)
             _this.loading = false
-            console.log(_this.stories)
           }
         })
       },
@@ -78,13 +80,12 @@
         let _this = this
         _this.loading = true
         ajax({
-          url: 'http://api.yatessss.com:8888/news-at/api/4/section/34/before/' + _this.timestamp,
+          url: 'http://api.yatessss.com:8888/news-at/api/4/section/' + _this.sectionId + '/before/' + _this.timestamp,
           method: 'GET',
           callback: function (res) {
             _this.$set('stories', _this.stories.concat(res.stories))
             _this.$set('timestamp', res.timestamp)
             _this.loading = false
-            console.log(_this.stories)
           }
         })
       }

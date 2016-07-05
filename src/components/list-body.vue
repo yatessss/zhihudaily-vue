@@ -3,7 +3,7 @@
 <template>
   <div class="list-box">
     <ul>
-      <h2 class="title">{{listInfo.date}}</h2>
+      <h2 class="title">{{listInfo.date | dateTime}}</h2>
       <list-comp v-for="item in listInfo.stories" :item="item"></list-comp>
     </ul>
   </div>
