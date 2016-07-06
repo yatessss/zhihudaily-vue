@@ -22,9 +22,9 @@
           </div>
           <!--侧边栏列表-->
           <div class="sidebar-list">
-            <p class="sidebar-list-first" @click="hiddenBar"><i class="iconfont">&#xe61b</i>首页</p>
+            <p v-link="{path: '/'}" class="sidebar-list-first" @click="hiddenBar"><i class="iconfont">&#xe61b</i>首页</p>
             <ul class="sidebar-list-ul">
-              <li class="sidebar-list-li" v-for="item in list" @click="hiddenBar">
+              <li class="sidebar-list-li" v-for="item in list" @click="hiddenBar" v-link="{name: 'theme', params: { id: item.id }}">
                 <p>{{item.name}}</p>
                 <div>+</div>
               </li>
@@ -57,7 +57,7 @@
     },
     methods: {
       replace (str) {
-        return str.replace(/http\w{0,1}:\/\/pic/g, 'https://images.weserv.nl/?url=pic')
+        return str.replace(/http\w{0,1}:\/\/p/g, 'https://images.weserv.nl/?url=p')
       },
       getList () {
         let _this = this

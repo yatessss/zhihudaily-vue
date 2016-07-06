@@ -1,6 +1,6 @@
-<!--列表页--2.:19开始改动>
+<!--列表页2.:19开始改动-->
 <template>
-  <div class="main-list">
+  <div class="main-list" id="foo">
     <list-header :show-sidebar.sync="showSidebar" :title="'首页'" :icon-display="true"> </list-header>
     <!--侧边栏-->
     <side-bar :show-sidebar.sync="showSidebar"> </side-bar>
@@ -9,17 +9,14 @@
     <div v-if="showSidebar" class="sidebar-mask" @click="hiddenBar"></div>
 
     <!--轮播组件-->
-    <slider :top_stories="topStories" v-cloak></slider>
+    <!--<slider :top_stories="topStories" v-cloak></slider>-->
+    <!--<list-body v-for="item in allStories" :list-info="item"></list-body>-->
 
-    <list-body v-for="item in allStories" :list-info="item"></list-body>
-
+    <router-view></router-view>
   </div>
 </template>
 
 <script type="text/ecmascript-6">
-import ajax from '../ajax'
-import slider from '../components/slider.vue'
-import listBody from '../components/list-body.vue'
 import sideBar from '../components/sidebar.vue'
 import listHeader from '../components/list-header.vue'
 
@@ -27,81 +24,32 @@ import listHeader from '../components/list-header.vue'
 /*eslint-disable no-new*/
 export default {
   components: {
-    slider,
-    listBody,
     sideBar,
     listHeader
   },
   data () {
     return {
-      topStories: [],
-      allStories: [],
-      date: '',
       loading: false,
       showSidebar: false
     }
   },
-  ready () {
-    this.getLatest()
-  },
   attached () {
   },
-  route: {
-    data (transition) {
-      var _this = this
-      _this.$nextTick(function () {
-        window.document.body.scrollTop = window.sessionStorage.scrollTop
-      })
-      window.addEventListener('scroll', _this.getScrollData, false)
-      transition.next()
-    },
-    deactivate (transition) {
-      var _this = this
-      window.removeEventListener('scroll', _this.getScrollData, false)
-      window.sessionStorage.scrollTop = window.document.body.scrollTop
-      transition.next()
-    }
-  },
+//  route: {
+//    data (transition) {
+//      var _this = this
+//      window.addEventListener('scroll', false)
+//      transition.next()
+//    },
+//    deactivate (transition) {
+//      var _this = this
+//      window.removeEventListener('scroll', false)
+//      transition.next()
+//    }
+//  },
   methods: {
-    getLatest () {
-      let _this = this
-      _this.loading = true
-      ajax({
-//        url: 'http://news-at.zhihu.com/api/4/news/latest',
-        url: 'http://api.yatessss.com:8888/news-at/api/4/news/latest',
-        method: 'GET',
-        callback: function (res) {
-          _this.$set('topStories', res.top_stories)
-          _this.allStories.push(res)
-          _this.$set('date', res.date)
-          _this.loading = false
-//          console.log(_this.allStories)
-        }
-      })
-    },
-    getNews () {
-      let _this = this
-      _this.loading = true
-      ajax({
-//        url: 'http://news.at.zhihu.com/api/4/news/before/' + _this.date,
-        url: 'http://api.yatessss.com:8888/news-at/api/4/news/before/' + _this.date,
-        method: 'GET',
-        callback: function (res) {
-          _this.allStories.push(res)
-          _this.$set('date', res.date)
-          _this.loading = false
-//          console.log(_this.allStories)
-        }
-      })
-    },
-    getScrollData () {
-      var _this = this
-      if ((window.document.body.offsetHeight + window.document.body.scrollTop) + 100 > window.document.body.scrollHeight && !_this.loading) {
-        _this.getNews()
-      }
-    },
     replace (str) {
-      return str.replace(/http\w{0,1}:\/\/pic/g, 'https://images.weserv.nl/?url=pic')
+      return str.replace(/http\w{0,1}:\/\/p/g, 'https://images.weserv.nl/?url=p')
     },
     showBar () {
       window.document.body.style.overflow = 'hidden'

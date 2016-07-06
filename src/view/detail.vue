@@ -4,27 +4,29 @@
     <!--详情页头部-->
     <detail-header :popularity="extra.popularity" :comments="extra.comments" :show-share.sync="showShare"></detail-header>
 
-    <div class="detail-img-box margin-top" :style="{ backgroundImage: 'url(' + replace(image) + ')' }">
-      <div class="detail-mask"></div>
-      <h1 class="detail-title">{{title}}</h1>
-      <p class="detail-image-source">{{imageSource}}</p>
-    </div>
-
-    <!--推荐者部分-->
-    <div v-link="{path: '/recommenders' }" v-if="recommenders.length !== 0" class="recommenders-box">
-      <p>推荐者</p>
-      <div class="recommenders-item" v-for="item in recommenders">
-        <img :src="item.avatar | replaceUrl" alt="">
+    <div class="detail-main-box">
+      <div v-if="image" class="detail-img-box margin-top" :style="{ backgroundImage: 'url(' + replace(image) + ')' }">
+        <div class="detail-mask"></div>
+        <h1 class="detail-title">{{title}}</h1>
+        <p class="detail-image-source">{{imageSource}}</p>
       </div>
-    </div>
 
-    <detail-content  :content="body"> </detail-content>
+      <!--推荐者部分-->
+      <div v-link="{path: '/recommenders' }" v-if="recommenders.length > 0" class="recommenders-box">
+        <p>推荐者</p>
+        <div class="recommenders-item" v-for="item in recommenders">
+          <img :src="item.avatar | replaceUrl" alt="">
+        </div>
+      </div>
 
-    <div v-if="section.name" class="section-box" v-link="{path: '/section'}">
-      <div class="section-btn">
-        <img :src="thumbnail | replaceUrl" alt="">
-        <p>本文来自: {{section.name}} · 合集</p>
-        <div class="arrow"></div>
+      <detail-content v-if="body" :content="body"> </detail-content>
+
+      <div v-if="section.name" class="section-box" v-link="{path: '/section'}">
+        <div class="section-btn">
+          <img :src="thumbnail | replaceUrl" alt="">
+          <p>本文来自: {{section.name}} · 合集</p>
+          <div class="arrow"></div>
+        </div>
       </div>
     </div>
 
@@ -102,7 +104,7 @@
     },
     methods: {
       replace (str) {
-        return str.replace(/http\w{0,1}:\/\/pic/g, 'https://images.weserv.nl/?url=pic')
+        return str.replace(/http\w{0,1}:\/\/p/g, 'https://images.weserv.nl/?url=p')
       },
       getDetails () {
         let _this = this
@@ -189,8 +191,9 @@
   .color-yellow{
     background: #FFCE00;
   }
-  .margin-top{
-    margin-top: 50px;
+
+  .detail-main-box{
+    padding-top: 50px;
   }
   .mask{
     position: fixed;

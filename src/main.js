@@ -12,6 +12,9 @@ import comments from './view/comments.vue'
 import detail from './view/detail.vue'
 import recommenders from './view/recommender.vue'
 import section from './view/section.vue'
+import listDefault from './components/list-default.vue'
+import listTheme from './components/list-theme.vue'
+
 import Swiper from 'swiper'
 window.Swiper = Swiper
 
@@ -35,14 +38,11 @@ router.map({
     component: list,
     subRoutes: {
       '/': {
-        component: {
-          template: '<p>Default sub view for Foo</p>'
-        }
+        component: listDefault
       },
-      '/theme': {
-        component: {
-          template: '<p>Default sub view for Foo</p>'
-        }
+      '/theme/:id': {
+        name: 'theme',
+        component: listTheme
       }
     }
   },

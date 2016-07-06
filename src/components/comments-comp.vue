@@ -1,4 +1,4 @@
-<!--推荐者列表单元-->
+<!--评论列表单元-->
 <template>
   <li class="comment-li">
     <div class="img-box">

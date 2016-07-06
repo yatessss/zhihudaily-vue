@@ -6,8 +6,8 @@
       <p>{{item.title}}</p>
       <p class="time" v-if="item.display_date">{{item.display_date}}</p>
     </div>
-    <div class="list-img-box">
-      <img :src="images | replaceUrl" alt="">
+    <div v-if="item.images" class="list-img-box">
+      <img :src="item.images[0] | replaceUrl" alt="">
       <p v-if="item.multipic" class="tip"><i class="iconfont">&#xe61c</i>多图</p>
     </div>
   </li>
@@ -19,15 +19,14 @@
     props: ['item'],
     data () {
       return {
-        id: this.item.id,
-        images: this.item.images[0]
+        id: this.item.id
       }
     },
     attached () {
     },
     methods: {
       replace (str) {
-        return str.replace(/http\w{0,1}:\/\/pic/g, 'https://images.weserv.nl/?url=pic')
+        return str.replace(/http\w{0,1}:\/\/p/g, 'https://images.weserv.nl/?url=p')
       }
     }
   }
@@ -43,6 +42,7 @@
   }
   .list-detail-box{
     position: relative;
+    min-height: 63px;
     width: 97%;
     margin: 8px auto 0 auto;
     background: #ffffff;
