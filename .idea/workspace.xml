@@ -2,31 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f1ace8be-61c6-4a9b-889d-60b45ddaf44e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/list-default.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/list-theme.vue" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/css/app.6249ed60ea03b13ac99de27871834669.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/css/app.6249ed60ea03b13ac99de27871834669.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/js/app.49d821743a76a4fb98a0.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/js/app.49d821743a76a4fb98a0.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/js/manifest.86ddc0ae95323bc43e44.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/js/manifest.86ddc0ae95323bc43e44.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/js/vendor.823120e47fee286b35b0.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/js/vendor.823120e47fee286b35b0.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/js/app.5a9cd6e0eb437ad3f2bb.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/js/app.5a9cd6e0eb437ad3f2bb.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/js/manifest.346fd534027597ff5cc3.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/js/manifest.346fd534027597ff5cc3.js.map" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/index.html" afterPath="$PROJECT_DIR$/dist/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/comments-comp.vue" afterPath="$PROJECT_DIR$/src/components/comments-comp.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/detail-content.vue" afterPath="$PROJECT_DIR$/src/components/detail-content.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/list-body.vue" afterPath="$PROJECT_DIR$/src/components/list-body.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/list-comp.vue" afterPath="$PROJECT_DIR$/src/components/list-comp.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/list-header.vue" afterPath="$PROJECT_DIR$/src/components/list-header.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/sidebar-header.vue" afterPath="$PROJECT_DIR$/src/components/sidebar-header.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/sidebar.vue" afterPath="$PROJECT_DIR$/src/components/sidebar.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/slider.vue" afterPath="$PROJECT_DIR$/src/components/slider.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/filters.js" afterPath="$PROJECT_DIR$/src/filters.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main.js" afterPath="$PROJECT_DIR$/src/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/detail.vue" afterPath="$PROJECT_DIR$/src/view/detail.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/list.vue" afterPath="$PROJECT_DIR$/src/view/list.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/theme.vue" afterPath="$PROJECT_DIR$/src/view/theme.vue" />
     </list>
     <ignored path="zhihudaily-vue.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -142,8 +123,8 @@
           <file leaf-file-name="list.vue" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/view/list.vue">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="38">
-                  <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
+                <state relative-caret-position="228">
+                  <caret line="12" column="26" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
                   <folding>
                     <element signature="e#585#632#0" expanded="true" />
                   </folding>
@@ -195,21 +176,21 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="list-default.vue" pinned="false" current-in-tab="true">
+          <file leaf-file-name="list-default.vue" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/components/list-default.vue">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-95">
+                <state relative-caret-position="133">
                   <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="list-theme.vue" pinned="false" current-in-tab="false">
+          <file leaf-file-name="list-theme.vue" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/components/list-theme.vue">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="418">
-                  <caret line="62" column="72" selection-start-line="62" selection-start-column="42" selection-end-line="62" selection-end-column="72" />
+                <state relative-caret-position="228">
+                  <caret line="120" column="3" selection-start-line="120" selection-start-column="3" selection-end-line="120" selection-end-column="3" />
                   <folding>
                     <element signature="e#469#495#0" expanded="true" />
                   </folding>
@@ -391,6 +372,50 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zhihudaily-vue" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zhihudaily-vue" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="img" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zhihudaily-vue" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zhihudaily-vue" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
@@ -503,16 +528,16 @@
       <workItem from="1467598602718" duration="14683000" />
       <workItem from="1467630093754" duration="1492000" />
       <workItem from="1467633393191" duration="1811000" />
-      <workItem from="1467636207257" duration="56048000" />
+      <workItem from="1467636207257" duration="56586000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="225369000" />
+    <option name="totallyTimeSpent" value="225907000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="24" y="23" width="1876" height="979" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12884097" sideWeight="0.76121795" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -520,7 +545,7 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32807216" sideWeight="0.49811321" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12884097" sideWeight="0.23878205" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29650506" sideWeight="0.49811321" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29650506" sideWeight="0.49811321" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32845894" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
@@ -894,31 +919,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/list.vue">
+    <entry file="file://$PROJECT_DIR$/src/components/list-default.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
-          <folding>
-            <element signature="e#585#632#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="133">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/list-theme.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="62" column="72" selection-start-line="62" selection-start-column="42" selection-end-line="62" selection-end-column="72" />
+        <state relative-caret-position="228">
+          <caret line="120" column="3" selection-start-line="120" selection-start-column="3" selection-end-line="120" selection-end-column="3" />
           <folding>
             <element signature="e#469#495#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/list-default.vue">
+    <entry file="file://$PROJECT_DIR$/src/view/list.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-95">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="228">
+          <caret line="12" column="26" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
+          <folding>
+            <element signature="e#585#632#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
