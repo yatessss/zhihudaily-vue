@@ -32,7 +32,19 @@ var router = new VueRouter()
 // 稍后我们会讲解嵌套路由
 router.map({
   '/': {
-    component: list
+    component: list,
+    subRoutes: {
+      '/': {
+        component: {
+          template: '<p>Default sub view for Foo</p>'
+        }
+      },
+      '/theme': {
+        component: {
+          template: '<p>Default sub view for Foo</p>'
+        }
+      }
+    }
   },
   '/detail/:id': {
     name: 'detail',

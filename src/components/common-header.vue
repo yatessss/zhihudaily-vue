@@ -1,16 +1,15 @@
+<!--评论页推荐页等通用头部-->
 <template>
-  <div class="list-header">
-    <div class="header-icon" @click="showBar"><i class="iconfont">&#xe612</i></div>
+  <div class="common-header">
+    <div class="header-icon" @click="goBack"><i class="iconfont">&#xe603</i></div>
     <div class="header-cont"><p>{{title}}</p></div>
-    <div class="header-icon" v-show="iconDisplay"><i class="iconfont">&#xe610</i></div>
-    <div class="header-icon" v-show="iconDisplay"><i class="iconfont">&#xe619</i></div>
   </div>
 </template>
 
 <script>
   /*eslint-disable no-new*/
   export default{
-    props: ['showSidebar', 'title', 'iconDisplay'],
+    props: ['title'],
     data () {
       return {
       }
@@ -18,12 +17,8 @@
     attached () {
     },
     methods: {
-      replace (str) {
-        return str.replace(/http\w{0,1}:\/\/pic/g, 'https://images.weserv.nl/?url=pic')
-      },
-      showBar () {
-        document.body.style.overflow = 'hidden'
-        this.showSidebar = !this.showSidebar
+      goBack () {
+        window.history.back()
       }
     }
   }
@@ -32,12 +27,12 @@
 <style scoped lang="scss" rel="stylesheet/scss">
   .iconfont {
     font-family:"iconfont";
-    font-size:19px;
+    font-size: 19px;
     font-style:normal;
     color: #ffffff;
+    margin-right: 3px;
   }
-
-  .list-header{
+  .common-header{
     position: fixed;
     top: 0;
     z-index: 4;
@@ -52,6 +47,14 @@
       >i{
         line-height: 53px;
       }
+      >span{
+        color: #ffffff;
+        font-size: 14px;
+        margin-left: 3px;
+      }
+      .collection{
+        color: #FFCE00;
+      }
     }
     .header-cont {
       flex: 6;
@@ -60,6 +63,9 @@
         line-height: 50px;
         color: #ffffff;
         font-size:16px;
+        span{
+          font-size: 18px;
+        }
       }
     }
   }

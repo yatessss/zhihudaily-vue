@@ -2,10 +2,7 @@
 <template>
   <div>
     <!--头部-->
-    <div class="comments-header">
-      <div class="header-icon" @click="goBack"><i class="iconfont">&#xe603</i></div>
-      <div class="header-cont"><p>{{name}}</p></div>
-    </div>
+    <common-header :title="name"></common-header>
 
     <ul class="list">
       <list-comp v-for="item in stories" :item="item"> </list-comp>
@@ -16,10 +13,12 @@
 <script>
   import ajax from '../ajax'
   import listComp from '../components/list-comp.vue'
+  import commonHeader from '../components/common-header.vue'
   /*eslint-disable no-new*/
   export default{
     components: {
-      listComp
+      listComp,
+      commonHeader
     },
     data () {
       return {
@@ -33,11 +32,12 @@
 //      this.getLatest()
 //    },
     route: {
-      activate (transition) {
+      data (transition) {
         var _this = this
-        console.log(transition)
         _this.sectionId = window.sessionStorage.sectionId
-        this.getLatest()
+        if (window.sessionStorage.ifSectionReq === 'true') {
+          _this.getLatest()
+        }
         _this.$nextTick(function () {
           window.document.body.scrollTop = window.sessionStorage.sectionScrollTop
         })
@@ -52,9 +52,6 @@
       }
     },
     methods: {
-      goBack () {
-        window.history.back()
-      },
       getLatest () {
         let _this = this
         _this.loading = true
@@ -94,50 +91,6 @@
 </script>
 
 <style scoped lang="scss" rel="stylesheet/scss">
-  .iconfont {
-    font-family:"iconfont";
-    font-size: 19px;
-    font-style:normal;
-    color: #ffffff;
-    margin-right: 3px;
-  }
-  .comments-header{
-    position: fixed;
-    top: 0;
-    z-index: 4;
-    height: 50px;
-    width: 100%;
-    background: #00A2EA;
-    display: flex;
-    flex-direction: row;
-    .header-icon{
-      flex:1;
-      text-align: center;
-      >i{
-        line-height: 53px;
-      }
-      >span{
-        color: #ffffff;
-        font-size: 14px;
-        margin-left: 3px;
-      }
-      .collection{
-        color: #FFCE00;
-      }
-    }
-    .header-cont {
-      flex: 6;
-      padding-left: 10px;
-      >p{
-        line-height: 50px;
-        color: #ffffff;
-        font-size:16px;
-        span{
-          font-size: 18px;
-        }
-      }
-    }
-  }
   .list{
     margin-top: 50px;
     padding: 1px 5px 0 5px;

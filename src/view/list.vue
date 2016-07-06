@@ -1,7 +1,7 @@
-<!--列表页-->
+<!--列表页--2.:19开始改动>
 <template>
   <div class="main-list">
-    <list-header :show-sidebar.sync="showSidebar"> </list-header>
+    <list-header :show-sidebar.sync="showSidebar" :title="'首页'" :icon-display="true"> </list-header>
     <!--侧边栏-->
     <side-bar :show-sidebar.sync="showSidebar"> </side-bar>
 

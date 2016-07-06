@@ -78,6 +78,9 @@
         var _this = this
         if (transition.from.path === '/') {
           window.sessionStorage.sectionScrollTop = 0
+          window.sessionStorage.ifSectionReq = true
+        } else {
+          window.sessionStorage.ifSectionReq = false
         }
         _this.getDetails()
         _this.getExtra()

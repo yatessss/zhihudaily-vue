@@ -43,7 +43,6 @@
   }
   .list-detail-box{
     position: relative;
-    height: 100px;
     width: 97%;
     margin: 8px auto 0 auto;
     background: #ffffff;
