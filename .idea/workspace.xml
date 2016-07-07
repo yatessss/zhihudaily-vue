@@ -2,24 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aeb6df1e-3149-4620-ba98-e02030586c3d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/app.1e9571c23139bc765515b8dde2f18c77.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/app.1e9571c23139bc765515b8dde2f18c77.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/app.68f177540861423a47db.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/app.68f177540861423a47db.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/manifest.3adbfec549d6ccaef628.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/vendor.67ba72d12d11e94c5995.js.map" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/css/app.5332e6759ef3941e51955dd5185f2787.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/css/app.5332e6759ef3941e51955dd5185f2787.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/img/Screenshot_2016-06-30-19-52-23.2ee04d1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/img/Screenshot_2016-06-30-19-52-25.79c8945.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/js/app.0bec381596a71d4eff97.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/js/app.0bec381596a71d4eff97.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/js/manifest.b4ddcdb7c3ae47a45746.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/js/manifest.b4ddcdb7c3ae47a45746.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/js/vendor.7233a4af745edff2a27c.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/js/vendor.7233a4af745edff2a27c.js.map" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/js/manifest.b4ddcdb7c3ae47a45746.js.map" afterPath="$PROJECT_DIR$/static/js/manifest.3adbfec549d6ccaef628.js.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/js/vendor.7233a4af745edff2a27c.js" afterPath="$PROJECT_DIR$/static/js/vendor.67ba72d12d11e94c5995.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/css/app.1e9571c23139bc765515b8dde2f18c77.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/css/app.1e9571c23139bc765515b8dde2f18c77.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/js/app.68f177540861423a47db.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/js/app.68f177540861423a47db.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/js/manifest.3adbfec549d6ccaef628.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/js/manifest.3adbfec549d6ccaef628.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/js/vendor.67ba72d12d11e94c5995.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/js/vendor.67ba72d12d11e94c5995.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/lib/swiper-3.3.1.min.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
     </list>
@@ -74,7 +65,7 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="13" />
-    <option name="y" value="25" />
+    <option name="y" value="23" />
     <option name="width" value="1900" />
     <option name="height" value="979" />
   </component>
@@ -134,10 +125,10 @@
     <property name="editor.config.accepted" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
@@ -211,14 +202,15 @@
       <workItem from="1467632796212" duration="106000" />
       <workItem from="1467636007641" duration="107000" />
       <workItem from="1467810364052" duration="99000" />
+      <workItem from="1467889219657" duration="96000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="912000" />
+    <option name="totallyTimeSpent" value="1008000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="13" y="25" width="1900" height="979" extended-state="0" />
+    <frame x="13" y="23" width="1900" height="979" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24960086" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
