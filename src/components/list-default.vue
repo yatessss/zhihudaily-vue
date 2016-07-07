@@ -36,9 +36,14 @@
     route: {
       data (transition) {
         var _this = this
-        _this.$nextTick(function () {
-          window.document.body.scrollTop = window.sessionStorage.scrollTop
-        })
+        if (transition.from.name === 'detail') {
+          _this.$nextTick(function () {
+            window.document.body.scrollTop = window.sessionStorage.scrollTop
+          })
+        } else {
+//          _this.getLatest()
+          window.document.body.scrollTop = 0
+        }
         window.addEventListener('scroll', _this.getScrollList, false)
         transition.next()
       },
@@ -59,10 +64,9 @@
           method: 'GET',
           callback: function (res) {
             _this.$set('topStories', res.top_stories)
-            _this.allStories.push(res)
+            _this.$set('allStories', _this.allStories.concat(res))
             _this.$set('date', res.date)
             _this.loading = false
-//          console.log(_this.allStories)
           }
         })
       },
@@ -74,7 +78,7 @@
           url: 'http://api.yatessss.com:8888/news-at/api/4/news/before/' + _this.date,
           method: 'GET',
           callback: function (res) {
-            _this.allStories.push(res)
+            _this.$set('allStories', _this.allStories.concat(res))
             _this.$set('date', res.date)
             _this.loading = false
 //          console.log(_this.allStories)
@@ -83,9 +87,6 @@
       },
       getScrollList () {
         var _this = this
-        console.log('offsetHeight: ' + window.document.body.offsetHeight)
-        console.log('scrollTop: ' + window.document.body.scrollTop)
-        console.log('scrollHeight: ' + window.document.body.scrollHeight)
         if ((window.document.body.offsetHeight + window.document.body.scrollTop) + 100 > window.document.body.scrollHeight && !_this.loading) {
           _this.getNews()
         }

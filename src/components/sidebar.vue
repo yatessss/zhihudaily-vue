@@ -4,10 +4,10 @@
       <div class="swiper-wrapper" style="transition-duration: 0ms; transform: translate3d(0px, -26.8382px, 0px);">
         <div class="swiper-slide swiper-slide-active">
           <!--侧边栏头部-->
-          <div class="sidebar-header">
+          <div class="sidebar-header" v-link="{name: 'author', params: { id: '888'}}" @click="hiddenBar">
             <div class="user">
-              <img src="http://7xqch8.com1.z0.glb.clouddn.com/%E5%A4%B4%E5%83%8F4bed2e738bd4b31ca1ce4d1787d6277f9f2ff8a8.jpg" alt="">
-              <p>用户名字</p>
+              <img src="http://7xqch8.com1.z0.glb.clouddn.com/4.pic_hd.jpg" alt="">
+              <p>yatessss</p>
             </div>
             <div class="function">
               <div class="function-sub">
@@ -72,8 +72,8 @@
         })
       },
       hiddenBar () {
-        document.body.style.overflow = 'auto'
-        window.document.querySelector('html').style.overflow = 'auto'
+        document.body.style.overflow = 'initial'
+        window.document.querySelector('html').style.overflow = 'initial'
         this.showSidebar = !this.showSidebar
       }
     }
@@ -133,7 +133,7 @@
           margin-left: 20px;
           line-height: 30px;
           flex: 1;
-          font-size: 15px;
+          font-size: 18px;
           font-weight: 300;
           color: #ffffff;
         }

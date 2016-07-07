@@ -3,7 +3,8 @@
     <div class="header-icon" @click="showBar"><i class="iconfont">&#xe612</i></div>
     <div class="header-cont"><p>{{title}}</p></div>
     <div class="header-icon" v-show="iconDisplay"><i class="iconfont">&#xe610</i></div>
-    <div class="header-icon" v-show="iconDisplay"><i class="iconfont">&#xe619</i></div>
+    <div class="header-icon" v-show="iconDisplay" ><i class="iconfont">&#xe619</i></div>
+    <div class=""></div>
   </div>
 </template>
 
@@ -11,12 +12,6 @@
   /*eslint-disable no-new*/
   export default{
     props: ['showSidebar', 'title', 'iconDisplay'],
-    data () {
-      return {
-      }
-    },
-    attached () {
-    },
     methods: {
       replace (str) {
         return str.replace(/http\w{0,1}:\/\/p/g, 'https://images.weserv.nl/?url=p')

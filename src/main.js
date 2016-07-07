@@ -12,6 +12,8 @@ import comments from './view/comments.vue'
 import detail from './view/detail.vue'
 import recommenders from './view/recommender.vue'
 import section from './view/section.vue'
+import editors from './view/editor.vue'
+import author from './view/author.vue'
 import listDefault from './components/list-default.vue'
 import listTheme from './components/list-theme.vue'
 
@@ -43,6 +45,10 @@ router.map({
       '/theme/:id': {
         name: 'theme',
         component: listTheme
+      },
+      '/author/:id': {
+        name: 'author',
+        component: author
       }
     }
   },
@@ -58,6 +64,9 @@ router.map({
   },
   '/section': {
     component: section
+  },
+  '/editors': {
+    component: editors
   }
 })
 // 现在我们可以启动应用了！

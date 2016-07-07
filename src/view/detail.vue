@@ -19,7 +19,9 @@
         </div>
       </div>
 
+      <!--如果有body字段显示body,否则显示iframe加载外部链接-->
       <detail-content v-if="body" :content="body"> </detail-content>
+      <iframe v-else :src="shareUrl" frameborder="0">您的浏览器不支持iframe</iframe>
 
       <div v-if="section.name" class="section-box" v-link="{path: '/section'}">
         <div class="section-btn">
@@ -69,7 +71,8 @@
         thumbnail: '',
         extra: {},
         showShare: false,
-        recommenders: []
+        recommenders: [],
+        shareUrl: ''
       }
     },
     ready () {
@@ -125,6 +128,9 @@
               _this.$set('section', res.section)
               _this.$set('thumbnail', res.section.thumbnail)
             }
+            if (!res.body) {
+              _this.$set('shareUrl', res.share_url)
+            }
             _this.loading = false
           }
         })
@@ -142,6 +148,7 @@
           comments: '···'
         }
         _this.recommenders = []
+        _this.replaceUrl = ''
       },
       getExtra () {
         let _this = this
@@ -155,7 +162,7 @@
         })
       },
       hiddenShare () {
-        document.body.style.overflow = 'auto'
+        document.body.style.overflow = 'initial'
         this.showShare = !this.showShare
       }
     }
@@ -194,6 +201,11 @@
 
   .detail-main-box{
     padding-top: 50px;
+  }
+
+  iframe{
+    width: 100%;
+    height: 600px;
   }
   .mask{
     position: fixed;

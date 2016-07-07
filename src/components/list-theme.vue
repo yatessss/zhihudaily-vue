@@ -7,7 +7,12 @@
     <p class="detail-image-source">{{imageSource}}</p>
   </div>
   <!--主编-->
-
+  <div v-link="{path: '/editors' }" v-if="editors.length > 0" class="editors-box">
+    <p>主编</p>
+    <div class="editors-item" v-for="item in editors">
+      <img :src="item.avatar | replaceUrl" alt="">
+    </div>
+  </div>
   <!--列表-->
   <div class="list-box">
     <ul>
@@ -44,16 +49,15 @@
     route: {
       data (transition) {
         var _this = this
-        console.log(transition)
-//        判断从哪里来,如果是详情页就不重新请求
+//        判断从哪里来,如果是详情页就不重新请求,并返回上次列表位置
         if (transition.from.name === 'detail') {
-          return
+          _this.$nextTick(function () {
+            window.document.body.scrollTop = window.sessionStorage.scrollTop
+          })
         } else {
           _this.getTheme()
+          window.document.body.scrollTop = 0
         }
-        _this.$nextTick(function () {
-          window.document.body.scrollTop = window.sessionStorage.scrollTop
-        })
         window.addEventListener('scroll', _this.getScrollTheme, false)
         transition.next()
       },
@@ -61,6 +65,7 @@
         var _this = this
         window.removeEventListener('scroll', _this.getScrollTheme, false)
         window.sessionStorage.scrollTop = window.document.body.scrollTop
+        window.sessionStorage.editors = JSON.stringify(_this.editors)
         transition.next()
       }
     },
@@ -75,12 +80,12 @@
           callback: function (res) {
             _this.$set('allStories', res.stories)
             _this.$set('background', res.background)
+            _this.$set('editors', res.editors)
             _this.$set('description', res.description)
             _this.$set('name', res.name)
             _this.$set('image_source', res.image_source)
             _this.$set('id', _this.allStories[_this.allStories.length - 1].id)
             _this.loading = false
-            console.log(_this.allStories)
           }
         })
       },
@@ -95,15 +100,11 @@
             _this.$set('allStories', _this.allStories.concat(res.stories))
             _this.$set('id', _this.allStories[_this.allStories.length - 1].id)
             _this.loading = false
-            console.log(_this.allStories)
           }
         })
       },
       getScrollTheme () {
         var _this = this
-        console.log('offsetHeight: ' + window.document.body.offsetHeight)
-        console.log('scrollTop: ' + window.document.body.scrollTop)
-        console.log('scrollHeight: ' + window.document.body.scrollHeight)
         if ((window.document.body.offsetHeight + window.document.body.scrollTop) + 100 > window.document.body.scrollHeight && !_this.loading) {
           _this.getThemeBefore()
         }
@@ -157,7 +158,32 @@
     }
   }
   .list-box{
-    padding: 10px 5px 0 5px;
+    padding: 1px 5px 0 5px;
     background: #f2f2f2;
+  }
+  .editors-box{
+    background: #efefef;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-left: 50px;
+    p{
+      position: absolute;
+      top: 13px;
+      left: 15px;
+      font-size: 13px;
+      font-weight: bold;
+    }
+    .editors-item{
+      height: 30px;
+      width: 30px;
+      margin: 7px 7px 0 7px;
+      >img{
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+      }
+    }
   }
 </style>
