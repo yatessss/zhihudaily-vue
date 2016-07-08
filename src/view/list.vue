@@ -158,8 +158,8 @@ export default {
       }
       .list-detail-box{
         background: #404040;
-        border: 1px solid #343434;/*px*/
-        border-bottom: 1px solid #222222; /*px*/
+        border: 1px solid #343434;
+        border-bottom: 1px solid #222222;
         .list-content-box{
           color: #d2d2d2;
         }
@@ -203,7 +203,7 @@ export default {
       .content-inner{
         background: #343434;
         .question + .question{
-          border-top: 4px solid #222222;/*px*/
+          border-top: 4px solid #222222;
         }
       }
       .heading-content{
@@ -260,7 +260,7 @@ export default {
       }
     }
     .no-comments{
-      border-top: 1px solid #888888;/*px*/
+      border-top: 1px solid #888888;
     }
     .common-header{
       background: #222222;
@@ -270,7 +270,7 @@ export default {
       .list-detail-box{
         background: #404040;
         border: 1px solid #343434;
-        border-bottom: 1px solid #222222;/*px*/
+        border-bottom: 1px solid #222222;
         .list-content-box{
           color: #d2d2d2;
         }

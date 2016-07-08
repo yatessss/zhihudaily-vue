@@ -192,7 +192,7 @@
       }
     }
     .no-comments{
-      border-top: 1px solid #c3c3c3; /*px*/
+      border-top: 1px solid #c3c3c3;
       height: 530px;
       .no-comments-icon{
         width: 150px;
@@ -214,7 +214,7 @@
     }
   }
   .short-comments-nav{
-    border-top: 1px solid #c3c3c3; /*px*/
+    border-top: 1px solid #c3c3c3;
     padding: 10px 10px 10px 15px;
     font-size: 13px;
     position: relative;

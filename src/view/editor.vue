@@ -65,7 +65,7 @@
     }
     li{
       padding: 10px 0;
-      border-bottom: 1px solid #d1d1d1; /*px*/
+      border-bottom: 1px solid #d1d1d1;
       a{
         display: flex;
         flex-direction: row;

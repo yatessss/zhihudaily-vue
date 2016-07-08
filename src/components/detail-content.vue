@@ -410,7 +410,7 @@
       background-image: url(http://static.daily.zhihu.com/img/News_Column_Entrance_Highlight.png);
     }
     .night .headline {
-      border-bottom: 2px solid #303030; /*px*/
+      border-bottom: 2px solid #303030;
     }
     .night img {
       -webkit-mask-image: -webkit-gradient(linear, 0 0, 0 100%, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7)));

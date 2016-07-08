@@ -50,7 +50,7 @@
     color: #b0b0b0;
   }
   .comment-li{
-    border-top: 1px solid #c3c3c3; /*px*/
+    border-top: 1px solid #c3c3c3;
     padding: 10px 15px 10px 55px;
     position: relative;
     .img-box{

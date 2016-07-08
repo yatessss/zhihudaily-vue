@@ -50,8 +50,8 @@
     display: flex;
     flex-direction: row;
     border-radius: 5px;
-    border: 1px solid #eaeaea;  /*px*/
-    border-bottom: 1px solid #d0d0d0; /*px*/
+    border: 1px solid #eaeaea;
+    border-bottom: 1px solid #d0d0d0;
     .list-content-box{
       margin-right: 10px;
       flex: 1;
