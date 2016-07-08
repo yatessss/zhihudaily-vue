@@ -76,13 +76,17 @@ export default {
       return str.replace(/http\w{0,1}:\/\/p/g, 'https://images.weserv.nl/?url=p')
     },
     showBar () {
-      window.document.body.style.overflow = 'hidden'
-      window.document.querySelector('html').style.overflow = 'hidden'
+      window.document.body.classList.add = 'scroll-stop'
+      window.document.querySelector('html').classList.add = 'scroll-stop'
+//      window.document.body.style.overflow = 'hidden'
+//      window.document.querySelector('html').style.overflow = 'hidden'
       this.showSidebar = !this.showSidebar
     },
     hiddenBar () {
-      window.document.body.style.overflow = 'initial'
-      window.document.querySelector('html').style.overflow = 'initial'
+      window.document.body.className = ''
+      window.document.querySelector('html').className = ''
+//      window.document.body.style.overflow = 'initial'
+//      window.document.querySelector('html').style.overflow = 'initial'
       this.showSidebar = !this.showSidebar
     }
   }
@@ -99,6 +103,9 @@ export default {
     url('//at.alicdn.com/t/font_1467357626_5109937.woff') format('woff'), /* chrome、firefox */
     url('//at.alicdn.com/t/font_1467357626_5109937.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
     url('//at.alicdn.com/t/font_1467357626_5109937.svg#iconfont') format('svg'); /* iOS 4.1- */
+  }
+  .scroll-stop{
+    overflow: hidden;
   }
 
   .main-list{
@@ -137,6 +144,135 @@ export default {
     height: 100%;
     width: 100%;
     font-family: Source Sans Pro, Helvetica, sans-serif;
+  }
+
+  #app.night-style{
+    background: #343434;
+    .list-header{
+      background: #222222;
+    }
+    .list-box{
+      background: #343434;
+      .title{
+        color: #B7B7B7;
+      }
+      .list-detail-box{
+        background: #404040;
+        border: 1px solid #343434;/*px*/
+        border-bottom: 1px solid #222222; /*px*/
+        .list-content-box{
+          color: #d2d2d2;
+        }
+      }
+    }
+    .mask{
+      .share-box{
+        background: #343434;
+        p{
+          color: #B7B7B7;
+        }
+      }
+    }
+    .sidebar-header{
+      background:  #222222;
+      p{
+        color: #B7B7B7;
+      }
+    }
+    .sidebar-list{
+      background: #343434;
+      .sidebar-list-ul{
+        color: #B7B7B7;
+      }
+    }
+    .editors-box{
+      background: #343434;
+      color: #B7B7B7;
+    }
+    .name{
+      color: #B7B7B7;
+    }
+    .content-wrap{
+      background: #343434;
+      .headline-title{
+        color: #B7B7B7;
+      }
+      .content-inner{
+        background: #343434;
+        .question + .question{
+          border-top: 4px solid #222222;/*px*/
+        }
+      }
+      .heading-content{
+        color: #888888;
+      }
+      .question-title{
+        color: #B7B7B7;
+      }
+      .content{
+        color: #888888;
+      }
+      .author{
+        color: #888888;
+      }
+      .view-more{
+        a{
+          background: #303030;
+          color: #6991C2;
+        }
+      }
+    }
+    .section-box{
+      background: #343434;
+      .section-btn{
+        background: #303030;
+        p{
+          color: #888888;
+        }
+      }
+    }
+    .recommenders-box{
+      background: #343434;
+      color: #B7B7B7;
+    }
+    .comments-header{
+      background: #222222;
+    }
+    .long-comments{
+      background: #343434;
+      .long-comments-nav{
+        color: #B7B7B7;
+      }
+      .comment-content{
+        color: #888888;
+      }
+    }
+    .short-comments{
+      background: #343434;
+      .short-comments-nav{
+        color: #B7B7B7;
+      }
+      .comment-content{
+        color: #888888;
+      }
+    }
+    .no-comments{
+      border-top: 1px solid #888888;/*px*/
+    }
+    .common-header{
+      background: #222222;
+    }
+    .list{
+      background: #343434;
+      .list-detail-box{
+        background: #404040;
+        border: 1px solid #343434;
+        border-bottom: 1px solid #222222;/*px*/
+        .list-content-box{
+          color: #d2d2d2;
+        }
+      }
+    }
   }
 
 </style>

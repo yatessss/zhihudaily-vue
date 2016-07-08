@@ -72,8 +72,10 @@
         })
       },
       hiddenBar () {
-        document.body.style.overflow = 'initial'
-        window.document.querySelector('html').style.overflow = 'initial'
+        window.document.body.className = ''
+        window.document.querySelector('html').className = ''
+//        document.body.style.overflow = 'initial'
+//        window.document.querySelector('html').style.overflow = 'initial'
         this.showSidebar = !this.showSidebar
       }
     }

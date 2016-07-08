@@ -249,6 +249,7 @@
           >p{
             color: #242424;
             text-align: center;
+            font-size: 13px;
           }
         }
       }

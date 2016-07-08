@@ -1,15 +1,6 @@
 <template>
-  <div class="swiper-container swiper-container-vertical swiper-container-free-mode">
-    <div class="swiper-wrapper" style="transition-duration: 0ms; transform: translate3d(0px, -26.8382px, 0px);">
-      <div class="swiper-slide swiper-slide-active">
-        <div v-html="msg"></div>
-        <img src="../assets/img/Screenshot_2016-06-30-19-52-23.jpg" alt="">
-        <img src="../assets/img/Screenshot_2016-06-30-19-52-25.jpg" alt="">
-      </div>
-    </div>
-    <!-- Add Scroll Bar -->
-    <div class="swiper-scrollbar" style="opacity: 0; transition-duration: 400ms;"><div class="swiper-scrollbar-drag" style="height: 145.59px; transition-duration: 0ms; transform: translate3d(0px, 9.76842px, 0px);"></div></div>
-  </div>
+  <img src="../assets/img/Screenshot_2016-07-08-10-49-04.jpg" alt="">
+  <img src="../assets/img/Screenshot_2016-07-08-10-31-25.jpg" alt="">
 </template>
 <style scoped >
   html, body {
@@ -24,23 +15,6 @@
     margin: 0;
     padding: 0;
   }
-  .swiper-container {
-    margin: 50px auto;
-    width: 100%;
-    height: 1000px;
-  }
-  .swiper-slide {
-    font-size: 30px;
-    height: auto;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    padding: 30px;
-  }
-  #header {
-    width: 100%;
-    height: 100px;
-    background: green;
-  }
 </style>
 <script>
   /* eslint-disable no-new */
@@ -52,13 +26,6 @@
       }
     },
     ready () {
-      new window.Swiper('.swiper-container', {
-        scrollbar: '.swiper-scrollbar',
-        direction: 'vertical',
-        slidesPerView: 'auto',
-        mousewheelControl: true,
-        freeMode: true
-      })
     },
     components: {
     }

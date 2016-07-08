@@ -8,7 +8,7 @@
       <li><a href="https://github.com/yatessss/zhihudaily-vue">项目github地址</a></li>
       <li><a href="http://www.yatessss.com/">我的博客地址</a></li>
       <li><p>给一个star好吗</p></li>
-      <li><p>(っ˘ڡ˘ς)</p></li>
+      <li><p>(✪ω✪)</p></li>
     </ul>
     <div class="btn">
       <p>登出</p>

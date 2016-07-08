@@ -79,6 +79,7 @@
     .title{
       color: #8c8c8c;
       margin-bottom: 15px;
+      font-size: 13px;
     }
     li{
       padding: 10px 0;

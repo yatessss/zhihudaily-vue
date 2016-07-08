@@ -2,9 +2,8 @@
   <div class="list-header">
     <div class="header-icon" @click="showBar"><i class="iconfont">&#xe612</i></div>
     <div class="header-cont"><p>{{title}}</p></div>
-    <div class="header-icon" v-show="iconDisplay"><i class="iconfont">&#xe610</i></div>
-    <div class="header-icon" v-show="iconDisplay" ><i class="iconfont">&#xe619</i></div>
-    <div class=""></div>
+    <div class="header-icon" v-show="iconDisplay" ><i class="iconfont">&#xe610</i></div>
+    <div class="header-icon" v-show="iconDisplay" @click="changeMode"><i class="iconfont">&#xe619</i></div>
   </div>
 </template>
 
@@ -12,13 +11,29 @@
   /*eslint-disable no-new*/
   export default{
     props: ['showSidebar', 'title', 'iconDisplay'],
+    data () {
+      return {
+        nightStyle: false
+      }
+    },
     methods: {
       replace (str) {
         return str.replace(/http\w{0,1}:\/\/p/g, 'https://images.weserv.nl/?url=p')
       },
       showBar () {
-        document.body.style.overflow = 'hidden'
+        window.document.body.className = 'scroll-stop'
+        window.document.querySelector('html').className = 'scroll-stop'
+//      window.document.body.style.overflow = 'hidden'
+//      window.document.querySelector('html').style.overflow = 'hidden'
         this.showSidebar = !this.showSidebar
+      },
+      changeMode () {
+        if (!this.nightStyle) {
+          window.document.getElementById('app').className = 'night-style'
+        } else {
+          window.document.getElementById('app').className = ''
+        }
+        this.nightStyle = !this.nightStyle
       }
     }
   }
