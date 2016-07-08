@@ -1,36 +1,32 @@
 <template>
   <div class="sidebar-box" :class="{'show-sidebar':showSidebar}">
-    <div class="sidebar-container swiper-container-vertical swiper-container-free-mode">
-      <div class="swiper-wrapper" style="transition-duration: 0ms; transform: translate3d(0px, -26.8382px, 0px);">
-        <div class="swiper-slide swiper-slide-active">
-          <!--侧边栏头部-->
-          <div class="sidebar-header" v-link="{name: 'author', params: { id: '888'}}" @click="hiddenBar">
-            <div class="user">
-              <img src="http://7xqch8.com1.z0.glb.clouddn.com/4.pic_hd.jpg" alt="">
-              <p>yatessss</p>
-            </div>
-            <div class="function">
-              <div class="function-sub">
-                <i class="iconfont">&#xe614</i>
-                <p>我的收藏</p>
-              </div>
-              <div class="function-sub">
-                <i class="iconfont">&#xe60f</i>
-                <p>离线下载</p>
-              </div>
-            </div>
+    <div class="swiper-slide">
+      <!--侧边栏头部-->
+      <div class="sidebar-header" v-link="{name: 'author', params: { id: '888'}}" @click="hiddenBar">
+        <div class="user">
+          <img src="http://7xqch8.com1.z0.glb.clouddn.com/4.pic_hd.jpg" alt="">
+          <p>yatessss</p>
+        </div>
+        <div class="function">
+          <div class="function-sub">
+            <i class="iconfont">&#xe614</i>
+            <p>我的收藏</p>
           </div>
-          <!--侧边栏列表-->
-          <div class="sidebar-list">
-            <p v-link="{path: '/'}" class="sidebar-list-first" @click="hiddenBar"><i class="iconfont">&#xe61b</i>首页</p>
-            <ul class="sidebar-list-ul">
-              <li class="sidebar-list-li" v-for="item in list" @click="hiddenBar" v-link="{name: 'theme', params: { id: item.id }}">
-                <p>{{item.name}}</p>
-                <div>+</div>
-              </li>
-            </ul>
+          <div class="function-sub">
+            <i class="iconfont">&#xe60f</i>
+            <p>离线下载</p>
           </div>
         </div>
+      </div>
+      <!--侧边栏列表-->
+      <div class="sidebar-list">
+        <p v-link="{path: '/'}" class="sidebar-list-first" @click="hiddenBar"><i class="iconfont">&#xe61b</i>首页</p>
+        <ul class="sidebar-list-ul">
+          <li class="sidebar-list-li" v-for="item in list" @click="hiddenBar" v-link="{name: 'theme', params: { id: item.id }}">
+            <p>{{item.name}}</p>
+            <div>+</div>
+          </li>
+        </ul>
       </div>
     </div>
   </div>
@@ -48,12 +44,6 @@
     },
     ready () {
       this.getList()
-      new window.Swiper('.sidebar-container', {
-        direction: 'vertical',
-        slidesPerView: 'auto',
-        mousewheelControl: true,
-        freeMode: true
-      })
     },
     methods: {
       getList () {
@@ -93,21 +83,15 @@
   .sidebar-box{
     position: fixed;
     height: 100%;
-    overflow: hidden;
+    overflow: auto;
     width: 290px;
     left: -290px;
     z-index: 99;
-    background: #f9f9f9;
     top: 0;
     bottom: 0;
     transition: all .3s ease;
     &.show-sidebar{
       transform: translateX(290px);
-    }
-    .sidebar-container {
-      margin: 0 auto;
-      width: 100%;
-      height: 667px;
     }
     .swiper-slide {
       font-size: 15px;
@@ -160,7 +144,9 @@
 
   .sidebar-list{
     padding-bottom: 20px;
+    background: #f9f9f9;
     .sidebar-list-first{
+      background: #f9f9f9;
       color: #00A2EA;
       height: 47px;
       line-height: 47px;

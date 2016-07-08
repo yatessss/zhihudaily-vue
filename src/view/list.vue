@@ -181,6 +181,9 @@ export default {
     }
     .sidebar-list{
       background: #343434;
+      .sidebar-list-first{
+        background: #343434;
+      }
       .sidebar-list-ul{
         color: #B7B7B7;
       }
