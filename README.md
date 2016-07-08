@@ -21,6 +21,7 @@
 
 # 在线地址
 
+需打开chrome浏览器的手机模拟功能
 [demo地址](http://zhihudaily-vue.yatessss.com/)
 
 
