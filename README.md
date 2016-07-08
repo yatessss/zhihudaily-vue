@@ -21,9 +21,12 @@
 
 # 在线地址
 
-需打开chrome浏览器的手机模拟功能
+需打开chrome浏览器的手机模拟功能，来获得比较好的浏览效果
+
 [demo地址](http://zhihudaily-vue.yatessss.com/)
 
+手机可扫码
+![](http://7xqch8.com1.z0.glb.clouddn.com/blog_2016_07_picQQ20160708-8.png)
 
 
 ## Build Setup
