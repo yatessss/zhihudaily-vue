@@ -56,9 +56,6 @@
       })
     },
     methods: {
-      replace (str) {
-        return str.replace(/http\w{0,1}:\/\/p/g, 'https://images.weserv.nl/?url=p')
-      },
       getList () {
         let _this = this
         ajax({
