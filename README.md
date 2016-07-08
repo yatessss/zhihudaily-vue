@@ -3,8 +3,10 @@
 > A Vue.js project
 
 # 运行动图
+[如无法播放请点击这里](http://7xqch8.com1.z0.glb.clouddn.com/blog_2016_07_picUntitled11.gif)
 
 ![](http://7xqch8.com1.z0.glb.clouddn.com/blog_2016_07_picUntitled11.gif)
+
 
 # 运行截图
 
