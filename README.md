@@ -2,7 +2,7 @@
 
 > A Vue.js project
 
-# 运行截图
+## 运行截图
 
 ![](http://7xqch8.com1.z0.glb.clouddn.com/blog_2016_07_picQQ20160708-0.png)
 ![](http://7xqch8.com1.z0.glb.clouddn.com/blog_2016_07_picQQ20160708-1.png)
@@ -13,12 +13,12 @@
 ![](http://7xqch8.com1.z0.glb.clouddn.com/blog_2016_07_picQQ20160708-6.png)
 ![](http://7xqch8.com1.z0.glb.clouddn.com/blog_2016_07_picQQ20160708-7.png)
 
-# 运行动图
+## 运行动图
 [如无法播放请点击这里](http://7xqch8.com1.z0.glb.clouddn.com/blog_2016_07_picUntitled11.gif)
 
 ![](http://7xqch8.com1.z0.glb.clouddn.com/blog_2016_07_picUntitled11.gif)
 
-# 在线地址
+## 在线地址
 
 需打开chrome浏览器的手机模拟功能，来获得比较好的浏览效果
 
@@ -28,11 +28,11 @@
 
 ![](http://7xqch8.com1.z0.glb.clouddn.com/blog_2016_07_picQQ20160708-8.png)
 
-# 项目总结（未完）
+## 项目总结（未完）
 
 [博客地址](http://www.yatessss.com/2016/07/08/%E4%BD%BF%E7%94%A8vue%E5%AE%8C%E6%88%90%E7%9F%A5%E4%B9%8E%E6%97%A5%E6%8A%A5web%E7%89%88.html)
 
-# Dependencies
+## Dependencies
 
 ```js
 "dependencies": {
