@@ -28,7 +28,7 @@
 
 ![](http://7xqch8.com1.z0.glb.clouddn.com/blog_2016_07_picQQ20160708-8.png)
 
-### dependencies
+# Dependencies
 
 ```js
 "dependencies": {
