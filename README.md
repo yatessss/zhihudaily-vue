@@ -28,6 +28,19 @@
 
 ![](http://7xqch8.com1.z0.glb.clouddn.com/blog_2016_07_picQQ20160708-8.png)
 
+### dependencies
+
+```js
+"dependencies": {
+    "babel-runtime": "^6.0.0",
+    "fastclick": "^1.0.6",
+    "lib-flexible": "^0.3.2",
+    "swiper": "^3.3.1",
+    "vue": "^1.0.21",
+    "vue-resource": "^0.7.0",
+    "vue-router": "^0.7.13"
+  }
+```
 
 ## Build Setup
 
