@@ -1,7 +1,7 @@
 <!--列表页-->
 <template>
   <div class="main-list" id="foo">
-    <list-header :show-sidebar.sync="showSidebar" :title="title" :icon-display="iconDisplay"> </list-header>
+    <list-header :show-sidebar.sync="showSidebar" :title="title" :tip="tip" :icon-display="iconDisplay"> </list-header>
     <!--侧边栏-->
     <side-bar :show-sidebar.sync="showSidebar"> </side-bar>
 
@@ -27,7 +27,8 @@ export default {
   data () {
     return {
       loading: false,
-      showSidebar: false
+      showSidebar: false,
+      tip: ''
     }
   },
   computed: {
@@ -67,6 +68,11 @@ export default {
       } else {
         return true
       }
+    }
+  },
+  events: {
+    'changeTile' (str) {
+      this.tip = str
     }
   },
   attached () {
@@ -116,6 +122,7 @@ export default {
     /*width: 357px;*/
     /*height: 667px;*/
     position: fixed;
+    transform: translateZ(0);
     top: 0;
     right: 0;
     bottom: 0;

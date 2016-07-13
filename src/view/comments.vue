@@ -147,6 +147,7 @@
   }
   .comments-header{
     position: fixed;
+    transform: translateZ(0);
     top: 0;
     z-index: 4;
     height: 50px;
@@ -232,6 +233,7 @@
 
   .mask{
     position: fixed;
+    transform: translateZ(0);
     top: 0;
     left: 0;
     width: 375px;

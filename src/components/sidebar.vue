@@ -82,6 +82,7 @@
   }
   .sidebar-box{
     position: fixed;
+    transform: translateZ(0);
     height: 100%;
     overflow: auto;
     width: 290px;

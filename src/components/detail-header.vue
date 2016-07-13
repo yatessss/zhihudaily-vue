@@ -45,6 +45,7 @@
 
   .list-header{
     position: fixed;
+    transform: translateZ(0);
     top: 0;
     z-index: 4;
     height: 50px;

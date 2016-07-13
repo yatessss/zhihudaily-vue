@@ -209,6 +209,7 @@
   }
   .mask{
     position: fixed;
+    transform: translateZ(0);
     top: 0;
     left: 0;
     width: 375px;

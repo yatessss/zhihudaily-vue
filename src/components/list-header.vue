@@ -1,7 +1,8 @@
 <template>
   <div class="list-header">
     <div class="header-icon" @click="showBar"><i class="iconfont">&#xe612</i></div>
-    <div class="header-cont"><p>{{title}}</p></div>
+    <div v-if="!tip" class="header-cont"><p>{{title}}</p></div>
+    <div v-if="tip" class="header-cont"><p>{{tip | dateTime}}</p></div>
     <div class="header-icon" v-show="iconDisplay" ><i class="iconfont">&#xe610</i></div>
     <div class="header-icon" v-show="iconDisplay" @click="changeMode"><i class="iconfont">&#xe619</i></div>
   </div>
@@ -10,7 +11,7 @@
 <script>
   /*eslint-disable no-new*/
   export default{
-    props: ['showSidebar', 'title', 'iconDisplay'],
+    props: ['showSidebar', 'title', 'iconDisplay', 'tip'],
     data () {
       return {
         nightStyle: false
@@ -49,6 +50,7 @@
 
   .list-header{
     position: fixed;
+    transform: translateZ(0);
     top: 0;
     z-index: 4;
     height: 50px;

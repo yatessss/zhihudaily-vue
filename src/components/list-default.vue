@@ -4,7 +4,7 @@
   <slider :top_stories="topStories" v-cloak></slider>
 
   <!--列表-->
-  <div class="list-box" v-for="item in allStories">
+  <div class="list-box s-{{* date}}" v-for="item in allStories">
     <ul>
       <h2 class="title">{{item.date | dateTime}}</h2>
       <list-comp v-for="subItem in item.stories" :item="subItem"></list-comp>
@@ -27,7 +27,9 @@
         topStories: [],
         allStories: [],
         date: '',
-        loading: false
+        loading: false,
+        dateArr: [],
+        titleTip: ''
       }
     },
     ready () {
@@ -45,11 +47,13 @@
           window.document.body.scrollTop = 0
         }
         window.addEventListener('scroll', _this.getScrollList, false)
+        window.addEventListener('scroll', _this.whatsTitle, false)
         transition.next()
       },
       deactivate (transition) {
         var _this = this
         window.removeEventListener('scroll', _this.getScrollList, false)
+        window.removeEventListener('scroll', _this.whatsTitle, false)
         window.sessionStorage.scrollTop = window.document.body.scrollTop
         transition.next()
       }
@@ -66,6 +70,7 @@
             _this.$set('topStories', res.top_stories)
             _this.$set('allStories', _this.allStories.concat(res))
             _this.$set('date', res.date)
+            _this.dateArr.push(_this.date)
             _this.loading = false
           }
         })
@@ -80,6 +85,7 @@
           callback: function (res) {
             _this.$set('allStories', _this.allStories.concat(res))
             _this.$set('date', res.date)
+            _this.dateArr.push(_this.date)
             _this.loading = false
 //          console.log(_this.allStories)
           }
@@ -93,6 +99,20 @@
       },
       replace (str) {
         return str.replace(/http\w{0,1}:\/\/p/g, 'https://images.weserv.nl/?url=p')
+      },
+      whatsTitle () {
+        let dateArr = this.dateArr
+        for (let i = 0, len = dateArr.length; i < len; i++) {
+          let top = document.querySelector('.s-' + dateArr[i]).getBoundingClientRect().top
+          if (top < 200 && top > 100) {
+            this.titleTip = dateArr[i - 1]
+            this.$dispatch('changeTile', this.titleTip)
+          }
+          if (top < 100 && top > 0) {
+            this.titleTip = dateArr[i]
+            this.$dispatch('changeTile', this.titleTip)
+          }
+        }
       }
     }
   }
