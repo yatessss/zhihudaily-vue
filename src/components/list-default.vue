@@ -47,13 +47,13 @@
           window.document.body.scrollTop = 0
         }
         window.addEventListener('scroll', _this.getScrollList, false)
-        window.addEventListener('scroll', _this.whatsTitle, false)
+        window.addEventListener('touchmove', _this.whatsTitle, false)
         transition.next()
       },
       deactivate (transition) {
         var _this = this
         window.removeEventListener('scroll', _this.getScrollList, false)
-        window.removeEventListener('scroll', _this.whatsTitle, false)
+        window.removeEventListener('touchmove', _this.whatsTitle, false)
         window.sessionStorage.scrollTop = window.document.body.scrollTop
         transition.next()
       }
@@ -104,11 +104,11 @@
         let dateArr = this.dateArr
         for (let i = 0, len = dateArr.length; i < len; i++) {
           let top = document.querySelector('.s-' + dateArr[i]).getBoundingClientRect().top
-          if (top < 200 && top > 100) {
+          if (top < 500 && top > 100) {
             this.titleTip = dateArr[i - 1]
             this.$dispatch('changeTile', this.titleTip)
           }
-          if (top < 100 && top > 0) {
+          if (top < 100 && top > -400) {
             this.titleTip = dateArr[i]
             this.$dispatch('changeTile', this.titleTip)
           }
