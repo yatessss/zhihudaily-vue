@@ -3,7 +3,7 @@
   <div class="main-list" id="foo">
     <list-header :show-sidebar.sync="showSidebar" :title="title" :tip="tip" :icon-display="iconDisplay"> </list-header>
     <!--侧边栏-->
-    <side-bar :show-sidebar.sync="showSidebar"> </side-bar>
+    <side-bar :show-sidebar.sync="showSidebar" :tip.sync="tip"> </side-bar>
 
     <!--侧边栏遮罩层-->
     <div v-if="showSidebar" class="sidebar-mask" @click="hiddenBar"></div>

@@ -36,7 +36,7 @@
   /*eslint-disable no-new*/
   import ajax from '../ajax'
   export default{
-    props: ['showSidebar'],
+    props: ['showSidebar', 'tip'],
     data () {
       return {
         list: []
@@ -64,6 +64,7 @@
 //        document.body.style.overflow = 'initial'
 //        window.document.querySelector('html').style.overflow = 'initial'
         this.showSidebar = !this.showSidebar
+        this.tip = null
       }
     }
   }
