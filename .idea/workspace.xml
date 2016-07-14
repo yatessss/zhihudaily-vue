@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aeb6df1e-3149-4620-ba98-e02030586c3d" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/css/app.c0ba695968646f0114b9ac80828d5497.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/css/app.c0ba695968646f0114b9ac80828d5497.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/js/app.89069e0649603a62db82.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/js/app.89069e0649603a62db82.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/js/manifest.50d18159c2c44af9ecb4.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/js/manifest.50d18159c2c44af9ecb4.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/css/app.984ceda81d7df14dc1ad31e596764794.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/css/app.984ceda81d7df14dc1ad31e596764794.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/js/app.7254ce50941fb9c2f0ba.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/js/app.7254ce50941fb9c2f0ba.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/js/manifest.dd636101dd36cf8ac1f7.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/js/manifest.dd636101dd36cf8ac1f7.js.map" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/static/js/vendor.9862a663d06448eacbd8.js" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/static/js/vendor.9862a663d06448eacbd8.js.map" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/static/lib/swiper-3.3.1.min.js" afterPath="" />
@@ -32,12 +32,12 @@
     <favorites_list name="zhihudaily-vue" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="10" column="390" selection-start-line="10" selection-start-column="390" selection-end-line="10" selection-end-column="390" />
+            <state relative-caret-position="266">
+              <caret line="14" column="21" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -94,8 +94,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -125,10 +125,10 @@
     <property name="editor.config.accepted" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
@@ -206,11 +206,12 @@
       <workItem from="1467973919465" duration="125000" />
       <workItem from="1467976088245" duration="32000" />
       <workItem from="1467980588507" duration="95000" />
+      <workItem from="1468480159169" duration="81000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1260000" />
+    <option name="totallyTimeSpent" value="1341000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="13" y="23" width="1900" height="979" extended-state="0" />
@@ -246,6 +247,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -279,8 +288,8 @@
     <entry file="file://$PROJECT_DIR$/static/js/app.24c45a8b5501feb10141.js" />
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="390" selection-start-line="10" selection-start-column="390" selection-end-line="10" selection-end-column="390" />
+        <state relative-caret-position="266">
+          <caret line="14" column="21" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
           <folding />
         </state>
       </provider>
