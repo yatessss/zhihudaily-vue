@@ -111,3 +111,14 @@ exports.dateTime = (str) => {
     return month + '月' + day + '日 ' + week
   }
 }
+
+/**
+ * 隐藏手机中间四位
+ *
+ */
+exports.formatPhone = (phone) => {
+  if (typeof phone == 'number') {
+    phone = phone.toString();
+  }
+  return phone.substr(0, 3) + '****' + phone.substr(7, 11);
+}
