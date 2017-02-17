@@ -393,9 +393,9 @@
     .button i {
       margin-right: 0;
     }
-    .headline .img-place-holder {
-      height: 0px;
-    }
+      .headline .img-place-holder {
+        height: 0px;
+      }
     .from-column {
       width: 280px;
       line-height: 30px;

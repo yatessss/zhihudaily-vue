@@ -32,7 +32,7 @@
 //      this.getLatest()
 //    },
     route: {
-      data (transition) {
+      activate (transition) {
         var _this = this
         _this.sectionId = window.sessionStorage.sectionId
         if (window.sessionStorage.ifSectionReq === 'true') {
