@@ -60,6 +60,8 @@
       },
       deactivate (transition) {
         this.recommenders = []
+        this.editors = []
+        this.detailId = ''
         transition.next()
       }
     },
