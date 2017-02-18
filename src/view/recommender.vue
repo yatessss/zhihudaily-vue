@@ -16,7 +16,7 @@
           </div>
         </a>
       </li>
-      <li v-for="item in editors">
+      <li v-if="editors" v-for="item in editors">
         <a :href="'http://www.zhihu.com/people/' + item.zhihu_url_token">
           <div class="img-box">
             <img :src="item.avatar | replaceUrl" alt="">

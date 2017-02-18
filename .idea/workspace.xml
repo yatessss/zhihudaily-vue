@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aeb6df1e-3149-4620-ba98-e02030586c3d" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/components/sidebar-header.vue" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/recommender.vue" afterPath="$PROJECT_DIR$/src/view/recommender.vue" />
     </list>
@@ -169,10 +168,10 @@
           <file leaf-file-name="recommender.vue" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/view/recommender.vue">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="126">
-                  <caret line="59" column="8" lean-forward="true" selection-start-line="59" selection-start-column="8" selection-end-line="59" selection-end-column="8" />
+                <state relative-caret-position="108">
+                  <caret line="15" column="16" lean-forward="true" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
                   <folding>
-                    <element signature="e#992#1018#0" expanded="true" />
+                    <element signature="e#1007#1033#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -495,12 +494,12 @@
       <workItem from="1473416526436" duration="58000" />
       <workItem from="1485149030845" duration="4733000" />
       <workItem from="1487050545603" duration="52343000" />
-      <workItem from="1487239239525" duration="30359000" />
+      <workItem from="1487239239525" duration="30770000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="136945000" />
+    <option name="totallyTimeSpent" value="137356000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -868,10 +867,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/view/recommender.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="59" column="8" lean-forward="true" selection-start-line="59" selection-start-column="8" selection-end-line="59" selection-end-column="8" />
+        <state relative-caret-position="108">
+          <caret line="15" column="16" lean-forward="true" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
           <folding>
-            <element signature="e#992#1018#0" expanded="true" />
+            <element signature="e#1007#1033#0" expanded="true" />
           </folding>
         </state>
       </provider>
