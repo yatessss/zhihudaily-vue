@@ -7,9 +7,6 @@
   export default{
     props: ['content'],
     data () {
-      return {
-        msg: 'hello vue'
-      }
     },
     attached () {
     },

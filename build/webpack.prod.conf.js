@@ -80,7 +80,7 @@ var webpackConfig = merge(baseWebpackConfig, {
     })
   ]
 })
-
+git
 if (config.build.productionGzip) {
   var CompressionWebpackPlugin = require('compression-webpack-plugin')
 

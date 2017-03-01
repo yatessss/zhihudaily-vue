@@ -15,7 +15,7 @@
       <div v-link="{path: '/recommenders' }" v-if="recommenders.length > 0" class="recommenders-box">
         <p>推荐者</p>
         <div class="recommenders-item" v-for="item in recommenders">
-          <img :src="item.avatar | replaceUrl" alt="">
+          <img :src="item.avatar | replaceUrl"  alt="">
         </div>
       </div>
 

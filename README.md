@@ -8,6 +8,10 @@
 
 请您了解相关情况，并遵守知乎协议。
 
+## 同功能react版项目地址：
+
+[https://github.com/yatessss/zhihudaily-react](https://github.com/yatessss/zhihudaily-react)
+
 ## 运行截图
 
 ![](http://7xqch8.com1.z0.glb.clouddn.com/blog_2016_07_picQQ20160708-0.png)
