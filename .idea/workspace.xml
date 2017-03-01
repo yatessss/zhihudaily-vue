@@ -3,11 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="aeb6df1e-3149-4620-ba98-e02030586c3d" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/webpack.prod.conf.js" afterPath="$PROJECT_DIR$/build/webpack.prod.conf.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/detail-content.vue" afterPath="$PROJECT_DIR$/src/components/detail-content.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/comments.vue" afterPath="$PROJECT_DIR$/src/view/comments.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/detail.vue" afterPath="$PROJECT_DIR$/src/view/detail.vue" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/recommender.vue" afterPath="$PROJECT_DIR$/src/view/recommender.vue" />
     </list>
     <ignored path="zhihudaily-vue.iws" />
@@ -58,7 +53,7 @@
             <entry file="file://$PROJECT_DIR$/README.md">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="180">
-                  <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="12" selection-end-column="92" />
+                  <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
                   <folding />
                 </state>
               </provider>
@@ -190,19 +185,19 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="recommender.vue" pinned="false" current-in-tab="false">
+          <file leaf-file-name="recommender.vue" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/view/recommender.vue">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="432">
-                  <caret line="24" column="39" lean-forward="false" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
+                <state relative-caret-position="360">
+                  <caret line="20" column="21" lean-forward="false" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
                   <folding>
-                    <element signature="e#1000#1026#0" expanded="true" />
+                    <element signature="e#1007#1033#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="package.json" pinned="false" current-in-tab="true">
+          <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/package.json">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="324">
@@ -286,11 +281,11 @@
         <option value="$PROJECT_DIR$/src/view/section.vue" />
         <option value="$PROJECT_DIR$/src/view/detail.vue" />
         <option value="$PROJECT_DIR$/build/webpack.prod.conf.js" />
-        <option value="$PROJECT_DIR$/src/view/recommender.vue" />
         <option value="$PROJECT_DIR$/src/components/list-header.vue" />
         <option value="$PROJECT_DIR$/src/view/list.vue" />
         <option value="$PROJECT_DIR$/src/components/detail-content.vue" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/src/view/recommender.vue" />
       </list>
     </option>
   </component>
@@ -598,12 +593,12 @@
       <workItem from="1487239239525" duration="109592000" />
       <workItem from="1488190128506" duration="2427000" />
       <workItem from="1488256744353" duration="13081000" />
-      <workItem from="1488280932267" duration="1135000" />
+      <workItem from="1488280932267" duration="1292000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="232821000" />
+    <option name="totallyTimeSpent" value="232978000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -763,6 +758,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
           <caret line="21" column="37" lean-forward="false" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -883,16 +879,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/recommender.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="24" column="39" lean-forward="false" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
-          <folding>
-            <element signature="e#1000#1026#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/build/build.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -945,14 +931,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="18" column="26" lean-forward="true" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/detail-content.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
@@ -964,8 +942,26 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="12" selection-end-column="92" />
+          <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="18" column="26" lean-forward="true" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/recommender.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="20" column="21" lean-forward="false" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
+          <folding>
+            <element signature="e#1007#1033#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
