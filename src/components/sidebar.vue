@@ -50,7 +50,7 @@
         let _this = this
         ajax({
 //          url: 'http://news-at.zhihu.com/api/4/themes',
-          url: 'http://api.yatessss.com:8888/news-at/api/4/themes',
+          url: '/news-at/api/4/themes',
           method: 'GET',
           callback: function (res) {
             _this.$set('list', res.others)

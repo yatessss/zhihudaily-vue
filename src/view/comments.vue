@@ -83,7 +83,7 @@
         _this.loading = true
         ajax({
 //          url: 'http://news-at.zhihu.com/api/4/story/' + _this.detailId + '/long-comments',
-          url: 'http://api.yatessss.com:8888/news-at/api/4/story/' + _this.detailId + '/long-comments',
+          url: '/news-at/api/4/story/' + _this.detailId + '/long-comments',
           method: 'GET',
           callback: function (res) {
             _this.$set('longComments', res.comments)
@@ -97,7 +97,7 @@
         window.document.getElementById('short-comments-top').scrollTop = 0
         ajax({
 //          url: 'http://news-at.zhihu.com/api/4/story/' + _this.detailId + '/short-comments',
-          url: 'http://api.yatessss.com:8888/news-at/api/4/story/' + _this.detailId + '/short-comments',
+          url: '/news-at/api/4/story/' + _this.detailId + '/short-comments',
           method: 'GET',
           callback: function (res) {
             _this.$set('shortComments', res.comments)
@@ -116,7 +116,7 @@
         let _this = this
         _this.loading = true
         ajax({
-          url: 'http://api.yatessss.com:8888/news-at/api/4/story/' + _this.detailId + '/short-comments/before/' + _this.id,
+          url: '/news-at/api/4/story/' + _this.detailId + '/short-comments/before/' + _this.id,
           method: 'GET',
           callback: function (res) {
             _this.$set('shortComments', _this.shortComments.concat(res.comments))

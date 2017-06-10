@@ -74,7 +74,7 @@
         _this.loading = true
         ajax({
 //          url: 'http://news-at.zhihu.com/api/4/story/' + _this.detailId + '/recommenders',
-          url: 'http://api.yatessss.com:8888/news-at/api/4/story/' + _this.detailId + '/recommenders',
+          url: '/news-at/api/4/story/' + _this.detailId + '/recommenders',
           method: 'GET',
           callback: function (res) {
             if (res.items) {
