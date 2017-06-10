@@ -19,6 +19,15 @@ module.exports = {
   dev: {
     env: require('./dev.env'),
     port: 8300,
-    proxyTable: {}
+    proxyTable: {
+      '/news-at': {
+        target: 'http://news-at.zhihu.com',
+        changeOrigin: true,
+        pathRewrite: {
+          '^/news-at/api': '/api', // rewrite path 
+        },
+
+      }
+    }
   }
 }

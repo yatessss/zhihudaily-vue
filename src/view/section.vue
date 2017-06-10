@@ -56,7 +56,7 @@
         let _this = this
         _this.loading = true
         ajax({
-          url: 'http://api.yatessss.com:8888/news-at/api/3/section/' + _this.sectionId,
+          url: '/news-at/api/3/section/' + _this.sectionId,
           method: 'GET',
           callback: function (res) {
             _this.stories.concat(res.stories)
@@ -77,7 +77,7 @@
         let _this = this
         _this.loading = true
         ajax({
-          url: 'http://api.yatessss.com:8888/news-at/api/4/section/' + _this.sectionId + '/before/' + _this.timestamp,
+          url: '/news-at/api/4/section/' + _this.sectionId + '/before/' + _this.timestamp,
           method: 'GET',
           callback: function (res) {
             _this.$set('stories', _this.stories.concat(res.stories))

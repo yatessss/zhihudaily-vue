@@ -64,7 +64,7 @@
         _this.loading = true
         ajax({
 //        url: 'http://news-at.zhihu.com/api/4/news/latest',
-          url: 'http://api.yatessss.com:8888/news-at/api/4/news/latest',
+          url: '/news-at/api/4/news/latest',
           method: 'GET',
           callback: function (res) {
             _this.$set('topStories', res.top_stories)
@@ -80,7 +80,7 @@
         _this.loading = true
         ajax({
 //        url: 'http://news.at.zhihu.com/api/4/news/before/' + _this.date,
-          url: 'http://api.yatessss.com:8888/news-at/api/4/news/before/' + _this.date,
+          url: '/news-at/api/4/news/before/' + _this.date,
           method: 'GET',
           callback: function (res) {
             _this.$set('allStories', _this.allStories.concat(res))
