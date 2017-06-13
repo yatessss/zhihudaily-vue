@@ -78,6 +78,7 @@ npm run e2e
 # run all tests
 npm test
 ```
+**开发环境可以使用allow-control-allow-origin这个插件进行跨域~**
 
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
 
