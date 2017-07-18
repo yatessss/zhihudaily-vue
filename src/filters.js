@@ -117,8 +117,8 @@ exports.dateTime = (str) => {
  *
  */
 exports.formatPhone = (phone) => {
-  if (typeof phone == 'number') {
-    phone = phone.toString();
+  if (typeof phone === 'number') {
+    phone = phone.toString()
   }
-  return phone.substr(0, 3) + '****' + phone.substr(7, 11);
+  return phone.substr(0, 3) + '****' + phone.substr(7, 11)
 }
