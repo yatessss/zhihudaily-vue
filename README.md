@@ -1,12 +1,7 @@
-# zhihudaily-vue
+# Liuguofu-vue
 
 > A Vue.js project
 
-## 声明
-
-本项目所有文字图片等稿件内容均由 [知乎](https://www.zhihu.com/) 提供，获取与共享之行为或有侵犯知乎权益的嫌疑。若被告知需停止共享与使用，本人会及时删除整个项目。
-
-请您了解相关情况，并遵守知乎协议。
 
 ## 同功能react版项目地址：
 
@@ -23,11 +18,6 @@
 ![](http://7xqch8.com1.z0.glb.clouddn.com/blog_2016_07_picQQ20160708-6.png)
 ![](http://7xqch8.com1.z0.glb.clouddn.com/blog_2016_07_picQQ20160708-7.png)
 
-## 运行动图
-
-[播放请点击这里](http://7xqch8.com1.z0.glb.clouddn.com/blog_2016_07_picUntitled11.gif)
-
-
 
 ## 在线地址
 
@@ -39,9 +29,8 @@
 
 ![](http://7xqch8.com1.z0.glb.clouddn.com/blog_2016_07_picQQ20160708-8.png)
 
-## 项目总结（未完）
+## 项目一览（未完）
 
-[博客地址](http://www.yatessss.com/2016/07/08/%E4%BD%BF%E7%94%A8vue%E5%AE%8C%E6%88%90%E7%9F%A5%E4%B9%8E%E6%97%A5%E6%8A%A5web%E7%89%88.html)
 
 ## Dependencies
 
@@ -87,3 +76,9 @@ For detailed explanation on how things work, checkout the [guide](http://vuejs-t
 MIT license.
 
 感谢 [ZhihuDailyPurify](https://github.com/izzyleung/ZhihuDailyPurify/wiki/%E7%9F%A5%E4%B9%8E%E6%97%A5%E6%8A%A5-API-%E5%88%86%E6%9E%90)整理了API
+
+## 声明
+
+本项目所有文字图片等稿件内容均由 [知乎](https://www.zhihu.com/) 提供，获取与共享之行为或有侵犯知乎权益的嫌疑。若被告知需停止共享与使用，本人会及时删除整个项目。
+
+请您了解相关情况，并遵守知乎协议。
